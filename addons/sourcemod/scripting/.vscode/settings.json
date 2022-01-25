@@ -1,0 +1,7 @@
+{
+    "sourcepawnLanguageServer.sourcemod_home": "c:/Users/devel/Desktop/Piu/CSGO/addons/sourcemod/scripting/include",
+    "sourcepawnLanguageServer.spcomp_path": "C:\\Users\\devel\\Desktop\\Piu\\CSGO\\addons\\sourcemod\\scripting\\spcomp.exe",
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active"
+}

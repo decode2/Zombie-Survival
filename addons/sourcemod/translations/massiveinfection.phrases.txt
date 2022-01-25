@@ -1,0 +1,2664 @@
+/* 	ReplaceString(sText, iMaxlen, "@default", TRANSLATION_TEXT_COLOR_DEFAULT);
+	ReplaceString(sText, iMaxlen, "@red", TRANSLATION_TEXT_COLOR_RED);
+	ReplaceString(sText, iMaxlen, "@lred", TRANSLATION_TEXT_COLOR_LRED);
+	ReplaceString(sText, iMaxlen, "@vlred", TRANSLATION_TEXT_COLOR_VLRED);
+	ReplaceString(sText, iMaxlen, "@lblue", TRANSLATION_TEXT_COLOR_LBLUE);
+	ReplaceString(sText, iMaxlen, "@golden", TRANSLATION_TEXT_COLOR_GOLDEN);
+	ReplaceString(sText, iMaxlen, "@lime", TRANSLATION_TEXT_COLOR_LIME);
+	ReplaceString(sText, iMaxlen, "@grey", TRANSLATION_TEXT_COLOR_GREY);
+	ReplaceString(sText, iMaxlen, "@purple", TRANSLATION_TEXT_COLOR_PURPLE);
+*/
+
+"Phrases"
+{
+	// Hours checks
+	"Happy hours time"
+	{
+		"en"	"We're in@vlred HAPPY HOURS@default, enjoy the@vlred double@default of gain."
+		"es"	"Estamos en@vlred HAPPY HOURS@default, disfruta del@vlred doble@default de ganancias."
+	}
+	
+	"After hours time"
+	{
+		"en"	"We're in@vlred AFTER HOURS@default, enjoy the@vlred triple@default of gain."
+		"es"	"Estamos en@vlred AFTER HOURS@default, disfruta del@vlred triple@default de ganancias."
+	}
+
+	"Common hours time"
+	{
+		"en"	"We're in@vlred STANDARD@default hour, gain: @vlred NORMAL@default."
+		"es"	"Estamos en horario @vlredESTANDAR@default, ganancia: @vlredNORMAL@default."
+	}
+
+	// VIP checks
+	"Vip expiration date"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"	"You're@vlred VIP@default since @lblue{1}@default and it expires @lblue{2}@default hours."
+		"es"	"Tu @vlredVIP@default inició el @lblue{1}@default horas, y vence el @lblue{2}@default horas."
+	}
+
+	"Not vip"
+	{
+		"en"	"You are not vip."
+		"es"	"No eres vip."
+	}
+
+	//
+	"Starting match"
+	{
+		"en"	"@goldenSTARTING MATCH@default"
+		"es"	"@goldenINICIANDO PARTIDA@default"
+	}
+
+	// Infections
+	"Infected someone chat"
+	{
+		"#format"	"{1:s}"
+		"en"	"@goldenINFECTION!@default You've earned @golden{1}@default ammopacks!"
+		"es"	"@goldenINFECCIÓN!@default Has ganado @golden{1}@default ammopacks!"
+	}
+
+	"Inherited infection chat"
+	{
+		"#format"	"{1:s}"
+		"en"	"@goldenINHERITED INFECTION!@default You've earned @golden{1}@default ammopacks!"
+		"es"	"@goldenCADENA DE INFECCIONES!@default Has ganado @golden{1}@default ammopacks!"
+	}
+
+	"Assassination chat"
+	{
+		"#format"	"{1:d}"
+		"en"	"@goldenASSASSINATION!@default You've earned @golden{1}@default ammopacks!"
+		"es"	"@goldenASESINATO!@default Has ganado @golden{1}@default ammopacks!"
+	}
+
+	// First reset
+	"First reset"
+	{
+		"en"	"Congratulations, you made your @goldenfirst@default reset!"
+		"es"	"Felicitaciones, hiciste tu @goldenprimer@default reset!"
+	}
+
+	// Common reset
+	"Common reset"
+	{
+		"en"	"Congratulations, you've made a @goldenreset@default!"
+		"es"	"Felicidades, has @goldenreseteado@default!"
+	}
+	
+	"Common reset bonus 1"
+	{
+		"en"	"@goldenGOLDEN@default points received, check the upgrades!"
+		"es"	"Has obtenido puntos @goldenGOLDEN@default, revisa las mejoras!"
+	}
+
+	"Common reset bonus 2"
+	{
+		"en"	"You obtained additional@golden 0.5% human damage and 3% zombie HP@default!"
+		"es"	"Has obtenido@golden 0,5% de daño humano y 3% de vida zombie@default adicionales!"
+	}
+
+	// Written chat banned, can't talk
+	"Chat banned"
+	{
+		"en"	"You cannot chat because you've been punished."
+		"es"	"No puedes escribir porque fuiste sancionado."
+	}
+
+	// INFO Messages
+	"Info message 1"
+	{
+		"en"	"To @goldenopen the menu@default, just bind a letter with @goldenmainmenu@default: @goldenbind z mainmenu@default in console."
+		"es"	"Para @goldenabrir el menú@default: @lbluebind z mainmenu@default en @lblueconsola@default."
+	}
+
+	"Info message 2"
+	{
+		"en"	"To @goldenturn on the flashlight@default: @lbluebind f flashlight@default."
+		"es"	"Para @goldenutilizar la linterna@default: @lbluebind f flashlight@default."
+	}
+
+	"Info message 3"
+	{
+		"en"	"To @goldenplant lasermines@default: @lbluepress CTRL+E@default."
+		"es"	"Para @goldenplantar minas@default: presiona @lblueCTRL+E@default."
+	}
+
+	"Info message 4"
+	{
+		"en"	"To @goldendefuse lasermines@default: press @lblueCTRL+R@default."
+		"es"	"Para @goldenquitar minas@default: presiona @lblueCTRL+R@default."
+	}
+
+	"Info message 5"
+	{
+		"en"	"To @goldenturn on/off nightvision@default: @lbluebind n nightvision@default in console.."
+		"es"	"Para  @goldenprender/apagar la nightvision@default: @lbluebind n nightvision@default en consola."
+	}
+
+	"Info message 6"
+	{
+		"en"	"To @goldenunstuck@default: type @lblue!unstuck@default in chat."
+		"es"	"Para @goldendestrabarte@default: escribe@lblue!destrabar@default en el chat."
+	}
+
+	"Info message 7"
+	{
+		"en"	"Remember to take a look at the @goldenSettings@default menu and the rules (@lblue!rules@default)."
+		"es"	"Recuerda revisar el menu de @goldenAjustes@default y las reglas para evitar sanciones (@lblue!reglas@default)."
+	}
+
+	"Info message 8"
+	{
+		"en"	"To change your weapons you have to @goldenLEVEL UP@default and change it from the menu! (@lbluetype !menu@default)."
+		"es"	"Para cambiar tus armas debes @goldenSUBIR DE NIVEL@default y puedes cambiarlas poniendo @lblue!menu@default."
+	}
+
+	// Actual mode message
+	"Current mode"
+	{
+		"#format"	"{1:s}"
+		"en"	"Current mode: @golden{1}@default."
+		"es"	"Modo actual: @golden{1}@default."
+	}
+
+	// Advertisements
+	/*"Advertisement 1"
+	{
+		"en"	"There are increased rewards available (VIP), you can receive up to x3 rewards!"
+		"es"	"Está disponible la venta de @goldenganancias aumentadas@default (conocidas como VIP) hasta x3."
+	}*/
+
+	"Advertisement 1"
+	{
+		"en"	"If you like our server, support us buying PIU Points from our website!"
+		"es"	"Si disfrutas nuestro servidor, apoyanos comprando @goldenPIU Points@default desde nuestra página web!"
+	}
+
+	"Advertisement 2"
+	{
+		"en"	"Being @goldenVIP@default offers augmented @goldenEXP@default & @goldenpoints gain@default!"
+		"es"	"El @goldenVIP@default ofrece ganancia de @goldenexperiencia@default y @goldenpuntos aumentada@default!"
+	}
+
+	"Advertisement 3"
+	{
+		"en"	"To get more info about us, visit our website @goldenwww.piu-games.com@default."
+		"es"	"Para más información, visita nuestra web @goldenwww.piu-games.com@default."
+	}
+
+	/*"Advertisement 4"
+	{
+		"en"	"Available @limeVIPs@default: from @lredx2@default to @lredx3@default."
+		"es"	"@limeVIPs@default disponibles: desde @lredx2@default hasta @lredx3@default."
+	}*/
+
+	"Advertisement 4"
+	{
+		"en"	"@limeVIP X2 & X3@default are available, get them from our @lredingame store@default!"
+		"es"	"Los @limeVIP X2@default y @limeX3@default están disponibles, puedes obtenerlos desde nuestra @lredtienda ingame@default!"
+	}
+
+	"Advertisement 5"
+	{
+		"en"	"You can test the @limex3 VIP@default for @limefree@default for @lime7@default days, just write @lime!testvip@default!"
+		"es"	"Puedes probar @limeVIP x3@default de manera @limegratuita@default por @lime7@default días escribiendo @lime!pruebavip@default!"
+	}
+
+	// Rules
+	"Against the rules"
+	{
+		"en"	"It's @redexplicitly FORBIDDEN@default:"
+		"es"	"Está @redexplícitamente PROHIBIDO@default:"
+	}
+
+	"Rule 1"
+	{
+		"en"	"@golden1@default: Letting yourself be killed/infected without attacking"
+		"es"	"@golden1@default: Dejarse matar/infectar"
+	}
+
+	"Rule 2"
+	{
+		"en"	"@golden2@default: Insulting other users offensively (not any type of joke)"
+		"es"	"@golden2@default: Insultar ofensivamente a otros usuarios"
+	}
+
+	"Rule 3"
+	{
+		"en"	"@golden3@default: Send addresses of other servers"
+		"es"	"@golden3@default: Pasar direcciones de otros servidores"
+	}
+
+	"Rule 4"
+	{
+		"en"	"@golden4@default: Abuse text or voice chat without mod's permission"
+		"es"	"@golden4@default: Abusar del chat de texto o voz sin permiso de moderadores"
+	}
+
+	"Rule 5"
+	{
+		"en"	"@golden5@default: Not attacking while being zombie (must attack constantly)"
+		"es"	"@golden5@default: No atacar siendo zombie (se debe atacar constantemente)"
+	}
+
+	"Rule 6"
+	{
+		"en"	"@golden6@default: Inviting other users to play on others servers"
+		"es"	"@golden6@default: Invitar a los usuarios a jugar fuera del servidor"
+	}
+
+	"Rule 7"
+	{
+		"en"	"@golden7@default: Placing mines that are very difficult to destroy"
+		"es"	"@golden7@default: Plantar minas demasiado difíciles de destruir"
+	}
+
+	"Rule 8"
+	{
+		"en"	"@golden8@default: Promoting any social media or other people's information"
+		"es"	"@golden8@default: Brindar redes sociales o información de otras personas sin permiso"
+	}
+
+	"Rule 9"
+	{
+		"en"	"@golden9@default: Blocking people from passing to hiding places"
+		"es"	"@golden9@default: Bloquear o entorpecer el ingreso de usuarios a un escondite"
+	}
+
+	"Rule 10"
+	{
+		"en"	"@golden10@default: FORBIDDEN: Using external/third party programs/hacks on the server"
+		"es"	"@golden10@default: PROHIBIDO el uso de aplicaciones/programas externos (hacks)"
+	}
+
+
+	"Not complying the rules"
+	{
+		"en"	"@goldenNot complying the rules is a@default @redPUNISHABLE@default reason."
+		"es"	"@goldenNo cumplir con estas reglas es motivo@default @redPENALIZABLE@default."
+	}
+
+	// Unstuck
+	"Not stuck"
+	{
+		"en"	"You're not stuck."
+		"es"	"No estás trabado."
+	}
+
+	"Mod removed lasermines"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"	"@golden{1}@default has removed @lblue{2}@default's lasermines."
+		"es"	"@golden{1}@default ha eliminado las lasermines de @lblue{2}@default."
+	}
+
+	"Your lasermines were removed"
+	{
+		"#format"	"{1:s}"
+		"en"	"@golden{1}@default has removed your lasermines, you can plant them again."
+		"es"	"@golden{1}@default ha eliminado tus minas láser, puedes plantarlas nuevamente."
+	}
+
+	"Registered message 1"
+	{
+		"en"	"Would you like to have better earnings? For more info type @golden!vip@default."
+		"es"	"¿Te gustaría contar con mejores ganancias? Para más información escribe @golden!vip@default en el chat."
+	}
+
+	"Registered message 2"
+	{
+		"en"	"Don't forget @lblueto check the rules!@default @lime(!rules)@default!"
+		"es"	"No olvides @lbluerevisar las reglas!@default @lime(!reglas en el chat)@default!"
+	}
+
+	"Registered message 3"
+	{
+		"en"	"Don't forget to check the @goldenmenu options@default and the @goldenhelp command@default! (@lblue!mainmenu@default y @lblue!help@default in chat)"
+		"es"	"No olvides revisar las opciones del @goldenmenú@default y el @goldencomando de ayuda@default! (@lblue!mainmenu@default y @lblue!ayuda@default en el chat)"
+	}
+
+	"Registered message 4"
+	{
+		"en"	"You can join our @goldenDiscord@default server! (@golden!discord@default)"
+		"es"	"Puedes ingresar a nuestro server de @goldenDiscord@default! (@golden!discord@default)"
+	}
+
+	/*
+	"Registered message 5"
+	{
+		"en"	"Did you know our @lblueCasual@default server? Connect to @goldencs.piu-games.com:27016@default and try it!"
+		"es"	"Ya conoces nuestro servidor lblueCasual@default? Entra a @goldencs.piu-games.com:27016@default y conocelo!"
+	}*/
+
+	"Registered message 5"
+	{
+		"en"	"Welcome to our server, enjoy it!"
+		"es"	"Bienvenido a @vlredZOMBIE SURVIVAL@default, que lo disfrutes!"
+	}
+
+	/*"Registered message 6"
+	{
+		"en"	"Did you know our @lblueJailbreak@default server? Connect to @goldencs.piu-games.com:27017@default and try it!"
+		"es"	"Ya conoces nuestro servidor @lblueJailbreak@default? Entra a @goldencs.piu-games.com:27017@default y conocelo!"
+	}*/
+
+	"Registered message 6"
+	{
+		"en"	"To get new weapons, classes and more, you need to @lbluelevel up@default!"
+		"es"	"Para conseguir mejores armas, clases y más, debes @lbluesubir de nivel@default!"
+	}
+
+	"Registered message 7"
+	{
+		"en"	"Find out every new about the community! @lblueURL@default: @goldenwww.piu-games.com@default."
+		"es"	"Enterate de todas las novedades de la comunidad! @lblueURL@default: @goldenwww.piu-games.com@default."
+	}
+
+	"Registered message 8"
+	{
+		"en"	"To get new weapons, classes and more, you need to @lbluelevel up@default!"
+		"es"	"Para conseguir mejores armas, clases y más, debes @lbluesubir de nivel@default!"
+	}
+
+	"Starting map vote"
+	{
+		"en"	"Last round, starting map vote."
+		"es"	"Última ronda, iniciando votación de mapas."
+	}
+
+	"Silence hurt sounds enabled"
+	{
+		"en"	"Mute zombie hurt sounds: @goldenENABLED@default."
+		"es"	"Silenciar sonido de dolor zombie: @goldenACTIVADO@default."
+	}
+
+	"Silence hurt sounds disabled"
+	{
+		"en"	"Mute zombie hurt sounds: @goldenDISABLED@default."
+		"es"	"Silenciar sonido de dolor zombie: @goldenDESACTIVADO@default."
+	}
+
+	"Silence shots enabled"
+	{
+		"en"	"Mute other people's shots: @goldenENABLED@default."
+		"es"	"Silenciar disparos ajenos: @goldenACTIVADO@default."
+	}
+
+	"Silence shots disabled"
+	{
+		"en"	"Mute other people's shots: @goldenDISABLED@default."
+		"es"	"Silenciar disparos ajenos: @goldenDESACTIVADO@default."
+	}
+
+	"Weapon auto upgrade enabled"
+	{
+		"en"	"Primary weapon auto upgrade: @goldenENABLED@default."
+		"es"	"Aumento autómatico de @goldenarma primaria@default: @goldenACTIVADO@default."
+	}
+
+	"Weapon auto upgrade disabled"
+	{
+		"en"	"Weapon auto upgrade: @goldenDISABLED@default."
+		"es"	"Aumento autómatico de @goldenarma @default: @goldenDESACTIVADO@default."
+	}
+
+	"Grenade pack auto upgrade enabled"
+	{
+		"en"	"Grenade pack auto upgrade: @goldenENABLED@default."
+		"es"	"Aumento autómatico de @goldenpack de granadas@default: @goldenACTIVADO@default"
+	}
+
+	"Grenade pack auto upgrade disabled"
+	{
+		"en"	"Grenade pack auto upgrade: @goldenDISABLED@default."
+		"es"	"Aumento autómatico de @goldenpack de granadas@default: @goldenDESACTIVADO@default"
+	}
+
+	"Zombie class auto upgrade enabled"
+	{
+		"en"	"Zombie class auto upgrade: @goldenENABLED@default."
+		"es"	"Cambio automático de clase zombie: @goldenACTIVADO@default."
+	}
+
+	"Zombie class auto upgrade disabled"
+	{
+		"en"	"Zombie class auto upgrade: @goldenDISABLED@default."
+		"es"	"Cambio automático de clase zombie: @goldenDESACTIVADO@default."
+	}
+
+	"Event mode hypernemesis"
+	{
+		"en"	"@goldenEVENT MODE: HYPERNEMESIS!@default"
+		"es"	"@goldenMODO DE EVENTO: HYPERNEMESIS!@default"
+	}
+
+	"Assassins into nemesis"
+	{
+		"en"	"@goldenEVERY ASSASSIN WILL BE TURNED INTO NEMESIS EVERY 15 SECONDS@default."
+		"es"	"@goldenTODOS LOS ASSASSINS SERÁN TRANSFORMADOS EN NEMESIS CADA 15 SEGUNDOS@default."
+	}
+
+	"Event mode pandemic"
+	{
+		"en"	"@goldenEVENT MODE: PANDEMIC!@default"
+		"es"	"@goldenMODO DE EVENTO: PANDEMIA!@default"
+	}
+
+	"Random transformations"
+	{
+		"#format"	"{1:d}"
+		"en"	"@goldenRANDOM TRANSFORMATIONS EVERY {1} SECONDS@default."
+		"es"	"@goldenTRANSFORMACIONES AL AZAR CADA {1} SEGUNDOS@default."
+	}
+
+	"Event mode meow"
+	{
+		"en"	"@goldenEVENT MODE: MEEEEEEEEEEOOOOOOOOOOW!!!@default"
+		"es"	"@goldenMODO DE EVENTO: MEEEEEEEEEEOOOOOOOOOOW!!!@default"
+	}
+
+	"Started forced mode"
+	{
+		"#format"	"{1:s},{2:s},{3:s}"
+		"en"	"{1} {2}:@default started @red{3}@default mode."
+		"es"	"{1} {2}:@default iniciar modo @red{3}@default."
+	}
+
+	"Cannot buy extra items"
+	{
+		"en"	"Can't buy extra items now!"
+		"es"	"No puedes comprar items ahora!"
+	}
+
+	"Not zombie"
+	{
+		"en"	"You're not @redzombie@default!"
+		"es"	"No eres @redzombie@default!"
+	}
+
+	"The last zombie cannot use antidote"
+	{
+		"en"	"The @redlast zombie@default can't use @goldenantidote@default!"
+		"es"	"El @redúnico zombie@default no puede usar @goldenantídoto@default!"
+	}
+
+	"Not alive"
+	{
+		"en"	"You're not @redalive@default!"
+		"es"	"No estás @redvivo@default!"
+	}
+
+	"Used antidote"
+	{
+		"en"	"You just used an @redantidote@default!"
+		"es"	"Has utilizado @redun antídoto@default!"
+	}
+
+	"No madness left"
+	{
+		"en"	"No madness left!"
+		"es"	"No te quedan @redfurias disponibles@default!"
+	}
+
+	"Item in cooldown"
+	{
+		"en"	"Item in @redcooldown@default!"
+		"es"	"Item en @redenfriamiento@default!"
+	}
+
+	"Used zombie madness"
+	{
+		"en"	"You used @redzombie madness@default!"
+		"es"	"Has utilizado @redfuria zombie@default!"
+	}
+
+	"Bought unlimited bullets"
+	{
+		"en"	"@redUnlimited bullets@default acquired!"
+		"es"	"@redBalas infinitas@default adquiridas!"
+	}
+
+	"Not human"
+	{
+		"en"	"You're not @redhuman@default!"
+		"es"	"No eres @redhumano@default!"
+	}
+
+	"Already have this item"
+	{
+		"en"	"You already have this @reditem@default!"
+		"es"	"Ya tienes este @reditem@default!"
+	}
+
+
+	"Item not allowed in this mode"
+	{
+		"en"	"Item not allowed in this mode!"
+		"es"	"Item no permitido en este modo!"
+	}
+
+	"Bought nightvision"
+	{
+		"en"	"You've bought @rednightvision@default!"
+		"es"	"Has comprado @redvisión nocturna@default!"
+	}
+
+	"Weapon changed"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your @goldenweapon@default is changing to @golden{1}@default at respawn."
+		"es"	"Tu @goldenarma@default cambiará cuando respawnees, y será: @golden{1}@default."
+	}
+
+	"Grenade pack selected"
+	{
+		"#format"	"{1:d}"
+		"en"	"Grenade pack {1} was @goldensuccessfully selected@default!"
+		"es"	"Pack {1} de granadas @goldenexitosamente seleccionado@default!"
+	}
+
+	"Zombie class changed"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your @goldenzombie class@default is changing to @golden{1}@default at respawn."
+		"es"	"Tu @goldenclase zombie@default cambiará cuando respawnees, y será: @golden{1}@default."
+	}
+
+	"Human class changed"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your @goldenhuman class@default is changing to @golden{1}@default at respawn."
+		"es"	"Tu @goldenclase humana@default cambiará cuando respawnees, y será: @golden{1}@default."
+	}
+
+	"Human alignment changed"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your @goldenhuman alignment@default is changing to @golden{1}@default at respawn."
+		"es"	"Tu @goldenalineación humana@default cambiará cuando respawnees, y será: @golden{1}@default."
+	}
+
+	"Zombie alignment changed"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your @goldenzombie alignment@default is changing to @golden{1}@default at respawn."
+		"es"	"Tu @goldenalineación zombie@default cambiará cuando respawnees, y será: @golden{1}@default."
+	}
+
+	"Tag changed"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your next tag will be: @golden{1}@default."
+		"es"	"Tu proximo tag sera: @golden{1}@default."
+	}
+
+	"Hat changed"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your hat has been changed to: @golden{1}@default."
+		"es"	"Has cambiado tu hat a: @golden{1}@default."
+	}
+
+	"Hat bought"
+	{
+		"#format"	"{1:s}"
+		"en"	"You bought the hat @lblue{1}@default."
+		"es"	"Has comprado el hat: @lblue{1}@default."
+	}
+
+	"Hat change in cooldown"
+	{
+		"en"	"You must wait to change your hat again."
+		"es"	"Debes esperar para volverte a cambiar el hat."
+	}
+
+	"Not hat points enought"
+	{
+		"en"	"You do not have enought PIU-Points to buy this hat."
+		"es"	"No tienes suficientes PIU-Points para comprar este hat."
+	}
+
+	"Already own this hat"
+	{
+		"en"	"You already own this hat."
+		"es"	"Ya tienes este hat."
+	}
+
+	"Tag change in cooldown"
+	{
+		"en"	"You must wait to change your tag again."
+		"es"	"Debes esperar para volverte a cambiar el tag."
+	}
+
+	"Not enought achievement"
+	{
+		"en"	"You dont accomplish the requirements of this achievement."
+		"es"	"No cumples los requisitos para este logro."
+	}
+
+	"Already have achievement"
+	{
+		"en"	"You already have this achievement."
+		"es"	"Ya tienes este logro."
+	}
+
+	"Achievement unlocked"
+	{
+		"#format"	"{1:s},{2:d}"
+		"en"	"Achievement @golden{1}@default unlocked! You earned @lime{2}@default."
+		"es"	"Logro desbloqueado @golden{1}@default! Has ganado @lime{2}@default."
+	}
+
+	"Infection grenade earnings"
+	{
+		"#format"	"{1:s}"
+		"en"	"You've earned @golden{1}@default ammopacks with your infection grenade."
+		"es"	"Lograste @golden{1}@default ammopacks con tu granada de infección."
+	}
+
+	"Not available"
+	{
+		"en"	"Forbidden action."
+		"es"	"Acción no permitida."
+	}
+
+	"Waiting for users"
+	{
+		"#format"	"{1:d}"
+		"en"	"Waiting @golden{1}@default users to increase the earnings"
+		"es"	"Faltan @golden{1}@default usuarios para elevar las ganancias"
+	}
+
+	"Restarting round"
+	{
+		"en"	"Restarting round."
+		"es"	"Reiniciando ronda."
+	}
+
+	"Profits disabled"
+	{
+		"en"	"PROFITS @redREDUCED TO 50 PERCENT@default."
+		"es"	"GANANCIAS @redREDUCIDAS AL 50 PORCIENTO@default."
+	}
+
+	"Profits enabled"
+	{
+		"en"	"PROFITS @goldenINCREASED@default!"
+		"es"	"GANANCIAS @goldenELEVADAS@default!"
+	}
+
+	"Already vip"
+	{
+		"en"	"You're already a VIP."
+		"es"	"Ya tienes vip."
+	}
+
+	"Vip test successful"
+	{
+		"en"	"VIP test successfully activated."
+		"es"	"Vip de prueba creado con exito."
+	}
+
+	"Relog to activate vip"
+	{
+		"en"	"In order to activate it, just relog."
+		"es"	"Para activarlo debes salir y volver a entrar."
+	}
+
+	"Already used test vip"
+	{
+		"en"	"You already used your VIP test."
+		"es"	"Ya has usado tu vip de prueba."
+	}
+
+	"Your vip test expires"
+	{
+		"#format"	"{1:s},{2:s},{3:s},{4:s}"
+		"en"	"Your vip expires at {2}/{1}/{3} at {4} hours"
+		"es"	"Tu vip de prueba se vence el {1}/{2}/{3} a las {4}"
+	}
+
+	"Warm Up chat message"
+	{
+		"en"	"Warm Up, take advantage and earn @goldenpoints@default!"
+		"es"	"Ronda de calentamiento, aprovecha a ganar @goldenpuntos@default!"
+	}
+
+	"Mutation done"
+	{
+		"en"	"@goldenMUTATION DONE@default."
+		"es"	"@goldenMUTACIÓN REALIZADA@default."
+	}
+
+	"Not valid email address"
+	{
+		"en"	"Enter a @lbluevalid email direction@default and try again."
+		"es"	"Ingresa una @lbluedirección de email válida@default e intenta nuevamente."
+	}
+
+	"Successfully registered"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"	"Successfully registered. @goldenMail@default: {1} @goldenContraseña@default: {2}"
+		"es"	"Registrado correctamente. @goldenMail@default: {1} @goldenContraseña@default: {2}"
+	}
+
+	"Not registered"
+	{
+		"en"	"Not possible to register, try again or contact an admin."
+		"es"	"No ha sido posible registrarte, intenta nuevamente más tarde o comunicate con un administrador."
+	}
+
+	"No user associated"
+	{
+		"en"	"There's no user associated to this steam account. You must select START GAME first."
+		"es"	"No existe usuario asociado a esta cuenta de steam. Para ingresar selecciona COMENZAR A JUGAR."
+	}
+
+	"We will try to create character with your name"
+	{
+		"en"	"We will try to create your character with your @goldencurrent name@default."
+		"es"	"Interemos crear tu personaje con tu @goldennombre actual@default, de no ser posible, será necesario que uses @vlredotro nombre@default."
+	}
+
+	"Blocked account"
+	{
+		"en"	"We found your account, @redhowever it seems to be banned@default. Join our @goldendiscord@default server to talk about it with the staff."
+		"es"	"Encontramos tu cuenta, @redpero parece estar bloqueada@default. Ingresa a nuestro @goldendiscord@default para hablarlo con el staff."
+	}
+
+	"Welcome again"
+	{
+		"#format"	"{1:s}"
+		"en"	"Welcome again @lblue{1}@default!"
+		"es"	"Bienvenido de nuevo @lblue{1}@default!"
+	}
+
+	"Character successfully created"
+	{
+		"#format"	"{1:s}"
+		"en"	"Character {1} successfully created!"
+		"es"	"Personaje {1} creado con éxito!"
+	}
+
+	"Registered message 1"
+	{
+		"en"	"Welcome to @goldenZombie Survival@default! To know the binds and basic info, type @lblue!help@default."
+		"es"	"Bienvenido a @goldenZombie Survival@default! Para conocer los binds y la información básica escribe @lblue!ayuda@default en el chat."
+	}
+
+	"Registered message 2"
+	{
+		"en"	"We hope you enjoy the @goldennew server update@default."
+		"es"	"Esperamos que disfruten del @goldennuevo servidor@default."
+	}
+
+	"Registered message 3"
+	{
+		"en"	"@goldenRECCOMENDATION@default: Type !rules to @goldenavoid any punishment@default!"
+		"es"	"@goldenRECOMENDACIÓN@default: Escribe !reglas para @goldenevitar penalizaciones@default!"
+	}
+
+	"Name already in use"
+	{
+		"en"	"That name is already in use, try another one."
+		"es"	"Ese nombre está en uso, prueba con otro."
+	}
+
+	"Welcome vip"
+	{
+		"#format"	"{1:d},{2:s}"
+		"en"	"Welcome @redVIP x{1} {2}@default!"
+		"es"	"Bienvenido @redVIP x{1} {2}@default!"
+	}
+
+	"Welcome staff"
+	{
+		"#format"	"{1:s}"
+		"en"	"Welcome @goldenSTAFF {1}@default."
+		"es"	"Bienvenido @goldenSTAFF {1}@default."
+	}
+
+	// Hint messages
+	// REGISTER
+	// Email hints
+	"Register email short"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Email too short."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> Email muy corto."
+	}
+
+	"Register email long"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Email too long."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> Email muy largo."
+	}
+
+	"Register email contains symbols"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Email contains invalid symbols."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> El email contiene símbolos inválidos."
+	}
+
+	"Register email contains spaces"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Email contains spaces."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> El email contiene espacios."
+	}
+
+	"Register email valid"
+	{
+		"#format"	"{1:s}"
+		"en"	"Entered email is: {1}"
+		"es"	"El email ingresado es: {1}"
+	}
+
+	// Password hints
+	"Register password short"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Password too short."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> Contraseña muy corta."
+	}
+
+	"Register password long"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Password too long."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> Contraseña muy larga."
+	}
+
+	"Register password contains symbols"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Password contains invalid symbols."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> La contraseña contiene símbolos inválidos."
+	}
+
+	"Register password contains spaces"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Password contains spaces."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> La contraseña contiene espacios."
+	}
+
+	"Register password valid"
+	{
+		"#format"	"{1:s}"
+		"en"	"Entered password is: {1}"
+		"es"	"La contraseña ingresada es: {1}"
+	}
+
+	// Name hints
+	"Register name short"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Name too short."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> Nombre muy corto."
+	}
+
+	"Register name long"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Name too long."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> Nombre muy largo."
+	}
+
+	"Register name contains symbols"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Name contains invalid symbols."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> El nombre contiene símbolos inválidos."
+	}
+
+	"Register name contains spaces"
+	{
+		"en"	"<font color='#ff0000' size='30'>Error!</font> Name contains spaces."
+		"es"	"<font color='#ff0000' size='30'>Error!</font> El nombre contiene espacios."
+	}
+
+	"Register name valid"
+	{
+		"#format"	"{1:s}"
+		"en"	"Entered name is: {1}"
+		"es"	"El nombre ingresado es: {1}"
+	}
+
+	// Combo
+	"Single combo info"
+	{
+		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
+		"en"	"Combo {1} AP\n{2} Total damage: {3}\nLast hit: {4} damage {5}"
+		"es"	"Combo {1} AP\n{2} Daño acumulado: {3}\nÚltimo hit: {4} de daño {5}"
+	}
+
+	
+	"Single combo finished"
+	{
+		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
+		"en"	"Combo finished: {1}\nCombo: {2} AP\nTotal damage: {3}\nBonus: {4} AP\nTotal profit: {5} AP"
+		"es"	"Combo finalizado: {1}\nCombo: {2} AP\nDaño total: {3}\nBonificación: {4} AP\nGanancia total: {5} AP"
+	}
+
+	"Combo finished"
+	{
+		"en"	"Combo finished"
+		"es"	"Combo finalizado"
+	}
+
+	// EndRound hints
+	"Zombies win"
+	{
+		"en"	"ZOMBIES have dominated the world!"
+		"es"	"Los ZOMBIES han dominado el mundo!"
+		"pt" 	"Os zumbis dominaram o mundo!"
+	}
+
+	"Humans win"
+	{
+		"en"	"HUMANS have survived!"
+		"es"	"Los HUMANOS han sobrevivido!"
+		"pt" 	"Os humanos sobreviveram"
+	}
+
+	"Spectating"
+	{
+		"en"	"SPECTATING\n"
+		"es"	"OBSERVANDO\n"
+	}
+
+	"Personal HUD beginning"
+	{
+		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:d},{6:i},{7:d}"
+		"en"	"HP: {1}\nArmor: {2}\nAmmopacks: {3}\nRemaining: {4}\nLevel: {5} ({6}PCT)\nResets: {7}"
+		"es"	"Vida: {1}\nArmadura: {2}\nAmmopacks: {3}\nRestantes: {4}\nNivel: {5} ({6}PCT)\nResets: {7}"
+		"pt"	"Vida: {1}\nArmadura: {2}\nAmmopacks: {3}\nRestante: {4}\nNível: {5} ({6}PCT)\nResets: {7}"
+	}
+
+	"Personal HUD ending complete"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"	"Class: {1}\nAlignment: {2}\n"
+		"es"	"Clase: {1}\nAlineación: {2}\n"
+		"pt"	"Classe: {1}\nAlienação: {2}\n"
+	}
+
+	"Personal HUD ending partial"
+	{
+		"#format"	"{1:s}"
+		"en"	"Type: {1}\n"
+		"es"	"Tipo: {1}\n"
+		"pt"	"Tipo: {1}\n"
+	}
+
+	"Threat in seconds"
+	{
+		"#format"	"{1:d}"
+		"en"	"Threat in {1}"
+		"es"	"Amenaza en {1}"
+		"pt" 	"Ameaça em {1}"
+	}
+
+	// Mutation
+	"Has mutated"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} has mutated.."
+		"es"	"{1} ha mutado.."
+	}
+
+	"Has been infected"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} has been infected.."
+		"es"	"{1} ha sido infectado.."
+	}
+
+	"T Virus has been released"
+	{
+		"en"	"T-Virus has been released.."
+		"es"	"Se ha liberado el Virus-T.."
+		"pt" 	"O T-Vírus foi liberado"
+	}
+
+	"Has taken antidote"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} has taken an antidote.."
+		"es"	"{1} ha tomado un antídoto.."
+	}
+
+	// Modes
+	"Someone is infected"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} is infected"
+		"es"	"{1} está infectado"
+	}
+
+	"Horde mode"
+	{
+		"en"	"HORDE MODE!"
+		"es"	"MODO HORDA!"
+	}
+
+	"Anihhilation someone is infected"
+	{
+		"#format"	"{1:s}"
+		"en"	"Anihhilation mode!\n {1} is infected"
+		"es"	"Modo aniquilación!\n {1} está infectado"
+	}
+
+	"Mode"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} mode"
+		"es"	"Modo {1}"
+	}
+
+	"Is a nemesis"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} is a Nemesis!"
+		"es"	"{1} es un Nemesis!"
+	}
+
+	"Is a survivor"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} is a Survivor!"
+		"es"	"{1} es un Survivor!"
+	}
+
+	"Is a gunslinger"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} is a Gunslinger!"
+		"es"	"{1} es un Gunslinger!"
+	}
+
+	"Is an assassin"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} is an Assassin!"
+		"es"	"{1} es un Assassin!"
+	}
+
+	"Is a sniper"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} is a Sniper!"
+		"es"	"{1} es un Sniper!"
+	}
+
+	"Is a chainsaw"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} is a Chainsaw!"
+		"es"	"{1} es un Chainsaw!"
+	}
+
+	"Is a FEV"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} is a FEV!"
+		"es"	"{1} es un FEV!"
+	}
+
+	"Is a Super Survivor"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} is a SUPER SURVIVOR!"
+		"es"		"{1} es un SUPER SURVIVOR!"
+	}
+
+	"Event mode HUD"
+	{
+		"en"	"EVENT MODE!\n"
+		"es"	"Modo de EVENTO!\n"
+	}
+
+	// Menu options
+	// Main menu
+	"Main menu title"
+	{
+		"#format"	"{1:s}"
+		"en"	"Zombie Survival v{1}\ncreated by Deco\n "
+		"es"	"Zombie Survival v{1}\ncreado por Deco\n "
+		"pt" 	"Zombie Survival v{1}\ncriado por Deco\n "
+	}
+
+	"Main menu option 1"
+	{
+		"en"	"Weapons menu"
+		"es"	"Menú de ARMAS"
+		"pt"	"Menu de ARMAS"
+	}
+
+	"Main menu option 2"
+	{
+		"en"	"Extra items\n "
+		"es"	"Items extra\n "
+	}
+
+	"Main menu option 3"
+	{
+		"en"	"Classes"
+		"es"	"Clases"
+	}
+
+	"Main menu option 4"
+	{
+		"en"	"Upgrades\n "
+		"es"	"Mejoras\n "
+	}
+
+
+	"Main menu option 5"
+	{
+		"en"	"Configs"
+		"es"	"Ajustes"
+		"pt"	"Ajustes"
+	}
+
+	"Main menu option 6"
+	{
+		"en"	"Party\n "
+		"es"	"Party\n "
+	}
+
+	"Main menu option 7"
+	{
+		"en"	"Purchase VIP"
+		"es"	"Comprar VIP"
+		"pt"	"Comprar VIP"
+	}
+
+	"Main menu option 8"
+	{
+		"en"	"STAFF menu"
+		"es"	"Menú de STAFF"
+	}
+
+	// Weapon menu
+	"Weapon menu title"
+	{
+		"en"	"Weapons menu"
+		"es"	"Menú de armas"
+		"pt" 	"Menu de armas"
+	}
+
+	"Weapon menu primary weapons"
+	{
+		"#format"	"{1:d},{2:s}"
+		"en"	"Primary weapons (T{1}): \n {2}"
+		"es"	"Armas primarias (T{1}): \n {2}"
+		"pt"	"Armas primárias (T{1}): \n {2}"
+	}
+
+	"Weapon menu secondary weapons"
+	{
+		"#format"	"{1:s}"
+		"en"	"Secondary weapons: \n {1}"
+		"es"	"Armas secundarias: \n {1}"
+		"pt" 	"Armas secundárias: \n {1}"
+	}
+
+	"Weapon menu grenades"
+	{
+		"#format"	"{1:d}"
+		"en"	"Grenade packs: \n Pack {1}\n \nAutomatic upgrade"
+		"es"	"Packs de granadas: \n Pack {1}\n \nCambio automático"
+		"pt" 	"Pack de granadas: \n Pack {1}\n \nAtualização automática"
+	}
+
+	// PRIMARY WEAPON
+	"Automatic weapons upgrade on"
+	{
+		"en"	"Weapons: \n ENABLED"
+		"es"	"Armas: \n ACTIVADO"
+		"pt"	"Armas: \n ATIVADO"
+	}
+
+	"Automatic weapons upgrade off"
+	{
+		"en"	"Weapons: \n DISABLED"
+		"es"	"Armas: \n DESACTIVADO"
+		"pt" 	"Armas: \n DESATIVADO"
+	}
+
+	// GRENADE PACK
+	"Automatic grenades upgrade on"
+	{
+		"en"	"Grenade pack: \n ENABLED"
+		"es"	"Pack de GRANADAS: \n ACTIVADO"
+		"pt"	"Pack de GRANADAS: \n ATIVADO"
+	}
+
+	"Automatic grenades upgrade off"
+	{
+		"en"	"Grenade pack: \n DISABLED"
+		"es"	"Pack de GRANADAS: \n DESACTIVADO"
+		"pt" 	"Pack de GRANADAS: \n DESACTIVADO"
+	}
+
+	// Primary weapons menu
+	"Selected weapon menu title"
+	{
+		"en"	"Select your primary weapon"
+		"es"	"Selecciona tu arma primaria"
+		"pt" 	"Selecione sua arma primária"
+	}
+
+	"Select secondary weapon menu title"
+	{
+		"en"	"Select your secondary weapon"
+		"es"	"Selecciona tu arma secundaria"
+		"pt" 	"Selecione sua arma secundária"
+	}
+
+	// Extra items menu
+	"Extra items menu title"
+	{
+		"en"	"Extra items"
+		"es"	"Items extra"
+		"pt" 	"Itens extras"
+	}
+
+	"Extra items menu option 1"
+	{
+		"#format"	"{1:s},{2:d},{3:d}"
+		"en"	"Antidote ({1} AP) {2}/{3}"
+		"es"	"Antídoto ({1} AP) {2}/{3}"
+	}
+
+	"Extra items menu option 2 unavailable"
+	{
+		"#format"	"{1:s},{2:d}"
+		"en"	"Zombie madness ({1} AP | {2} s)"
+		"es"	"Furia Zombie ({1} AP | {2} s)"
+	}
+
+	"Extra items menu option 2 available"
+	{
+		"#format"	"{1:s},{2:d},{3:d}"
+		"en"	"Zombie madness ({1} AP) {2}/{3}"
+		"es"	"Furia Zombie ({1} AP) {2}/{3}"
+	}
+
+	"Extra items menu option 3"
+	{
+		"#format"	"{1:s}"
+		"en"	"Unlimited bullets ({1} AP)"
+		"es"	"Balas infinitas ({1} AP)"
+	}
+
+	"Extra items menu option 4"
+	{
+		"#format"	"{1:s}"
+		"en"	"Nightvision ({1} AP)"
+		"es"	"Visión nocturna ({1} AP)"
+	}
+
+	"Extra items menu option 5"
+	{
+		"#format"	"{1:s}"
+		"en"	"Anti-infect kevlar ({1} AP)"
+		"es"	"Chaleco anti-infección ({1} AP)"
+	}
+
+	// CLASSES MENU
+	"Classes menu title"
+	{
+		"en"	"Classes menu"
+		"es"	"Menú de CLASES"
+		"pt"	"Menu de CLASSES"
+	}
+
+	"Classes menu option 1"
+	{
+		"#format"	"{1:s}"
+		"en"	"Zombie CLASSES\n {1}"
+		"es"	"Clases ZOMBIE\n {1}"
+		"pt" 	"Classes ZUMBIS\n {1}"
+	}
+
+	"Classes menu option 2"
+	{
+		"#format"	"{1:s}"
+		"en"	"Human CLASSES\n {1}"
+		"es"	"Clases HUMANAS\n {1}"
+	}
+
+	"Classes menu option 3"
+	{
+		"#format"	"{1:s}"
+		"en"	"Zombie ALIGNMENTS\n {1}"
+		"es"	"Alineaciones ZOMBIE\n {1}"
+		"pt" 	"Alienações ZUMBIS\n {1}"
+	}
+
+	"Classes menu option 4"
+	{
+		"#format"	"{1:s}"
+		"en"	"Human ALIGNMENTS\n {1}\n "
+		"es"	"Alineaciones HUMANAS\n {1}\n "
+		"pt"	"Alienações HUMANAS\n {1}\n "
+	}
+
+	// ZOMBIE CLASS
+	"Classes menu option 5 on"
+	{
+		"en"	"Classes upgrade: ON"
+		"es"	"Cambio automático de CLASES:\n ACTIVADO"
+		"pt" 	"Troca automática de CLASSES:\n ATIVADO"
+	}
+
+	"Classes menu option 5 off"
+	{
+		"en"	"Classes upgrade: OFF"
+		"es"	"Cambio automático de CLASES:\n DESACTIVADO"
+		"pt" 	"Troca automática de CLASSES:\n DESATIVADO"
+	}
+
+	// ZOMBIE CLASSES MENU
+	"Zombie classes menu title"
+	{
+		"en"	"Select your ZOMBIE class\n "
+		"es"	"Selecciona tu clase ZOMBIE\n "
+		"pt" 	"Selecione sua classe ZUMBI\n "
+	}
+
+	// HUMAN CLASSES MENU
+	"Human classes menu title"
+	{
+		"en"	"Select your HUMAN class\n "
+		"es"	"Selecciona tu clase HUMANA\n "
+		"pt" 	"Selecione sua classe HUMANA\n "
+	}
+
+	// ZOMBIE ALIGNMENTS MENU
+	"Zombie alignments menu title"
+	{
+		"en"	"Select your ZOMBIE alignment\n "
+		"es"	"Selecciona tu alineación ZOMBIE\n "
+		"pt" 	"Selecione sua alienação ZUMBI\n "
+	}
+
+	// HUMAN ALIGNMENTS MENU
+	"Human alignments menu title"
+	{
+		"en"	"Select your HUMAN alignment\n "
+		"es"	"Selecciona tu alineación HUMANA\n "
+		"pt" 	"Selecione sua alienação HUMANA\n "
+	}
+
+	// Upgrades menu
+	"Upgrades menu title"
+	{
+		"en"	"Upgrades menu\n "
+		"es"	"Menú de mejoras\n "
+		"pt" 	"Menu de melhorias\n "
+	}
+
+	"Upgrades menu option 1"
+	{
+		"en"	"Human upgrades"
+		"es"	"Mejoras humanas"
+		"pt" 	"Melhorias humanas"
+	}
+
+	"Upgrades menu option 2"
+	{
+		"en"	"Zombie upgrades"
+		"es"	"Mejoras zombie"
+		"pt"	"Melhorias zumbis"
+	}
+
+	"Upgrades menu option 3"
+	{
+		"en"	"Human golden upgrades"
+		"es"	"Mejoras golden humanas"
+		"pt" 	"Melhorias humanas golden"
+	}
+
+	"Upgrades menu option 4"
+	{
+		"en"	"Zombie golden upgrades\n "
+		"es"	"Mejoras golden zombie\n "
+		"pt" 	"Melhorias zumbis golden\n "
+	}
+
+	"Upgrades menu option 5"
+	{
+		"#format"	"{1:d}"
+		"en"	"RESET | Level: {1}"
+		"es"	"RESETEAR | Nivel: {1}"
+		"pt" 	"RESETAR | Nível: {1}"
+	}
+
+
+	// COMMON UPGRADES
+	// Human upgrades menu
+	"Human upgrades menu title"
+	{
+		"#format"	"{1:d}"
+		"en"	"Human upgrades\nAvailable points: {1} (HP)\nYou will earn your next point killing NEMESIS\n "
+		"es"	"Mejoras humanas\nPuntos disponibles: {1} (PH)\nGanarás tu próximo punto al matar un NEMESIS\n "
+		"pt" 	"Melhorias humanas\nPontos disponíveis: {1} (PH)\nVocê ganha pontos matando um NÊMESIS\n "
+	}
+
+	"Human upgrades menu option 1 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Damage\n (Level {1} | MAX)"
+		"es"	"Daño\n (Nivel {1} | MAX)"
+		"pt" 	"Dano\n (Nível {1} | MAX)"
+	}
+
+	"Human upgrades menu option 1 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Damage (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Daño (Costo: {1})\n (Nv. {2} / {3})"
+		"pt" 	"Dano (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Human upgrades menu option 2 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Resistance\n (Level {1} | MAX)"
+		"es"	"Resistencia\n (Nivel {1} | MAX)"
+		"pt" 	"Resistência\n (Nível {1} | MAX)"
+	}
+
+	"Human upgrades menu option 2 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Resistance (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Resistencia (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Resistência (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Human upgrades menu option 3 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Dexterity\n (Level {1} | MAX)"
+		"es"	"Agilidad\n (Nivel {1} | MAX)"
+		"pt"	"Agilidade\n (Nível {1} | MAX)"
+	}
+
+	"Human upgrades menu option 3 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Dexterity (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Agilidad (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Agilidade (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	// Hints
+	"Human upgrade 1 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"Human@lblue damage@default level upgraded to @lblue{1}@default."
+		"es"	"Daño@lblue humano@default mejorado al nivel @lblue{1}@default."
+	}
+
+	"Human upgrade 2 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"Human@lblue resistance@default level upgraded to @lblue{1}@default."
+		"es"	"Resistencia@lblue humana@default mejorada al nivel @lblue{1}@default."
+	}
+
+	"Human upgrade 3 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"Human@lblue dexterity@default level upgraded to @lblue{1}@default."
+		"es"	"Agilidad@lblue humana@default mejorada al nivel @lblue{1}@default."
+	}
+
+	"Not enought human points"
+	{
+		"en"	"Not enought@lblue human@default points."
+		"es"	"No tienes suficientes puntos@lblue humanos@default."
+	}
+
+	"Reset points option"
+	{
+		"#format"	"{1:d}"
+		"en"	"Reset points (Cost: {1})"
+		"es"	"Reestablecer puntos (Costo: {1})"
+		"pt"	"Restaurar pontos (Custo: {1})"
+	}
+
+	// ZOMBIE POINTS
+	// Zombie upgrades menu
+	"Zombie upgrades menu title"
+	{
+		"#format"	"{1:d}"
+		"en"	"Zombie upgrades\nAvailable points: {1}\nYou will earn your next point killing SURVIVOR\n "
+		"es"	"Mejoras zombie\nPuntos disponibles: {1}\nGanarás tu próximo punto al matar un SURVIVOR\n "
+		"pt" 	"Melhorias zumbis\nPontos disponíveis: {1}\nVocê ganha pontos matando um SURVIVOR\n "
+	}
+
+	"Zombie upgrades menu option 1 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"HP\n (Level {1} | MAX)"
+		"es"	"Vida\n (Nivel {1} | MAX)"
+		"pt"	"Vida\n (Nível {1} | MAX)"
+	}
+
+	"Zombie upgrades menu option 1 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"HP (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Vida (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Vida (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Zombie upgrades menu option 2 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Damage\n (Level {1} | MAX)"
+		"es"	"Daño\n (Nivel {1} | MAX)"
+		"pt"	"Dano\n (Nível {1} | MAX)"
+	}
+
+	"Zombie upgrades menu option 2 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Damage (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Daño (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Dano (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Zombie upgrades menu option 3 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Dexterity\n (Level {1} | MAX)"
+		"es"	"Agilidad\n (Nivel {1} | MAX)"
+		"pt"	"Agilidade\n (Nível {1} | MAX)"
+	}
+
+	"Zombie upgrades menu option 3 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Dexterity (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Agilidad (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Agilidade (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	// Hints
+	"Zombie upgrade 1 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"Zombie@vlred HP@default level upgraded to @vlred{1}@default."
+		"es"	"Vida@vlred zombie@default mejorada al nivel @vlred{1}@default."
+	}
+
+	"Zombie upgrade 2 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"Zombie@vlred damage@default level upgraded to @vlred{1}@default."
+		"es"	"Daño@vlred zombie@default mejorado al nivel @vlred{1}@default."
+	}
+
+	"Zombie upgrade 3 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"Zombie@vlred dexterity@default level upgraded to @vlred{1}@default."
+		"es"	"Agilidad@vlred zombie@default mejorada al nivel @vlred{1}@default."
+	}
+
+	"Not enought zombie points"
+	{
+		"en"	"Not enought@vlred zombie@default points."
+		"es"	"No tienes suficientes puntos@vlred zombie@default para comprar esta mejora."
+	}
+
+	// GOLDEN UPGRADES - QUE AL PEDO QUE PASO ESTO, PERO IGUAL LOS DEJO PREPARADOS
+	// Human upgrades menu
+	"Human golden upgrades menu title"
+	{
+		"#format"	"{1:d}"
+		"en"	"Human golden upgrades\nAvailable points: {1}\n "
+		"es"	"Mejoras humanas golden\nPuntos disponibles: {1}\n "
+		"pt" 	"Melhorias humanas golden\nPontos disponíveis: {1}\n "
+	}
+
+	"Human golden upgrades menu option 1 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Lasermines HP\n (Level {1} | MAX)"
+		"es"	"Vida de lasermines\n (Nivel {1} | MAX)"
+		"pt"	"Vida das minas laser\n (Nível {1} | MAX)"
+	}
+
+	"Human golden upgrades menu option 1 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Lasermines HP (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Vida de lasermines (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Vida das minas laser (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Human golden upgrades menu option 2 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Critical chance\n (Level {1} | MAX)"
+		"es"	"Chance crítica\n (Nivel {1} | MAX)"
+		"pt"	"Chance crítica\n (Nível {1} | MAX)"
+	}
+
+	"Human golden upgrades menu option 2 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Critical chance (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Chance crítica (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Chance crítica (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Human golden upgrades menu option 3 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Free unlimited bullets chance\n (Level {1} | MAX)"
+		"es"	"Probabilidad balas infinitas\n (Nivel {1} | MAX)"
+		"pt" 	"Probabilidade de balas infinitas\n (Nivel {1} | MAX)"
+	}
+
+	"Human golden upgrades menu option 3 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Free unlimited bullets chance (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Probabilidad balas infinitas (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Probabilidade de balas infinitas (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Human golden upgrades menu option 4 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Aura shield time\n (Level {1} | MAX)"
+		"es"	"Tiempo de escudo aura\n (Nivel {1} | MAX)"
+		"pt" 	"Duração da aura\n (Nível {1} | MAX)"
+	}
+
+	"Human golden upgrades menu option 4 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Aura shield time (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Tiempo de escudo aura (Costo: {1})\n (Nv. {2} / {3})"
+		"pt" 	"Duração da aura (Custo: {1}\n (Nv. {2} / {3})"
+	}
+
+	// Hints
+	"Human golden upgrade 1 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"@goldenLasermine HP@default level upgraded to @golden{1}@default."
+		"es"	"@goldenVida de lasermines@default mejorada al nivel @golden{1}@default."
+	}
+
+	"Human golden upgrade 2 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"@goldenCritical chance@default level upgraded to @golden{1}@default."
+		"es"	"@goldenChance crítica@default mejorada al nivel @golden{1}@default."
+	}
+
+	"Human golden upgrade 3 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"@goldenItem chance@default level upgraded to @golden{1}@default."
+		"es"	"@goldenChance de item@default mejorada al nivel @golden{1}@default."
+	}
+
+	"Human golden upgrade 4 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"@goldenAura shield time@default level upgraded to @golden{1}@default."
+		"es"	"@goldenTiempo de aura@default mejorada al nivel @golden{1}@default."
+	}
+
+	"Not enought golden human points"
+	{
+		"en"	"Not enought @goldengolden@default @lbluehuman@default points."
+		"es"	"No tienes suficientes puntos @goldengolden@default @lbluehumanos@default."
+	}
+
+	// ZOMBIE POINTS GOLDEN
+	// Zombie upgrades menu
+	"Zombie golden upgrades menu title"
+	{
+		"#format"	"{1:d}"
+		"en"	"Zombie upgrades\nAvailable points: {1}\n "
+		"es"	"Mejoras zombie\nPuntos disponibles: {1}\n "
+		"pt" 	"Melhorias zumbi golden\nPontos disponíveis: {1}\n"
+	}
+
+	"Zombie golden upgrades menu option 1 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Madness time\n (Level {1} | MAX)"
+		"es"	"Duración de furia\n (Nivel {1} | MAX)"
+		"pt" 	"Duração da fúria\n (Nível {1} | MAX)"
+	}
+
+	"Zombie golden upgrades menu option 1 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Madness time (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Duración de furia (Costo: {1})\n (Nv. {2} / {3})"
+		"pt" 	"Duração da fúria (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Zombie golden upgrades menu option 2 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Damage to lasermines\n (Level {1} | MAX)"
+		"es"	"Daño a lasermines\n (Nivel {1} | MAX)"
+		"pt"	"Dano às minas lasers\n (Nível {1} | MAX)"
+	}
+
+	"Zombie golden upgrades menu option 2 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Damage to lasermines (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Daño a lasermines (Costo: {1})\n (Nv. {2} / {3})"
+		"pt" 	"Dano às minas lasers (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Zombie golden upgrades menu option 3 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Leech\n (Level {1} | MAX)"
+		"es"	"Vampirismo\n (Nivel {1} | MAX)"
+		"pt" 	"Vampirismo\n (Nível {1} | MAX)"
+	}
+
+	"Zombie golden upgrades menu option 3 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Leech (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Vampirismo (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Vampirismo (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	"Zombie golden upgrades menu option 4 maxed"
+	{
+		"#format"	"{1:d}"
+		"en"	"Madness chance\n (Level {1} | MAX)"
+		"es"	"Chance de furia\n (Nivel {1} | MAX)"
+		"pt"	"Chance de fúria\n (Nível {1} | MAX)"
+	}
+
+	"Zombie golden upgrades menu option 4 not maxed"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Madness chance (Cost: {1})\n (Lv. {2} / {3})"
+		"es"	"Chance de furia (Costo: {1})\n (Nv. {2} / {3})"
+		"pt"	"Chance de fúria (Custo: {1})\n (Nv. {2} / {3})"
+	}
+
+	// Hints
+	"Zombie golden upgrade 1 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"@vlredMadness time@default level upgraded to @golden{1}@default."
+		"es"	"@vlredDuración de furia@default mejorada al nivel @golden{1}@default."
+	}
+
+	"Zombie golden upgrade 2 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"@vlredDamage to lasermines@default level upgraded to @golden{1}@default."
+		"es"	"@vlredDaño a lasermines@default mejorado al nivel @golden{1}@default."
+	}
+
+	"Zombie golden upgrade 3 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"@vlredLeech@default level upgraded to @golden{1}@default."
+		"es"	"@vlredSanguijuela@default mejorada al nivel @golden{1}@default."
+	}
+
+	"Zombie golden upgrade 4 successful"
+	{
+		"#format"	"{1:d}"
+		"en"	"@vlredMadness chance@default level upgraded to @golden{1}@default."
+		"es"	"@vlredChance de furia@default mejorada al nivel @golden{1}@default."
+	}
+
+	"Not enought golden zombie points"
+	{
+		"en"	"Not enought @goldengolden@default @vlredzombie@default points."
+		"es"	"No tienes suficientes puntos @goldengolden@default @vlredzombie@default."
+	}
+
+	// RESET MENU
+	"Reset menu title"
+	{
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"	"Reset important notes\n \nWhenever you reset your character you will receive:\n\n- New weapon unlocks \n- New hat unlock in certain resets \n- New tag according to your resets \n- 1 bonus human GOLDEN POINT\n- 1 bonus zombie GOLDEN POINT\n You will get closer to ascend in TIER \n \nIt will require you to:\n\n- Be level {1}\n- Pay {2} human and zombie points\nand will reset all your levels to 1\n \nCurrent resets: {3}"
+		"es"	"Notas importantes sobre reset\n \nCuando resetees tu personaje recibirás:\n\n- Desbloqueo de nuevas armas \n- Nuevo hat cada ciertos resets \n- Nuevo tag de acuerdo a tus resets \n- Bonus de 1 GOLDEN POINT humano\n- Bonus de 1 GOLDEN POINT zombie\n- Te acercarás a un ascenso de TIER \n \nRequerirá:\n\n- Que seas nivel {1}\n- {2} puntos humanos y zombie\ny reiniciará tus niveles a 1\n \nResets actuales: {3}"
+		"pt"	"Notas importantes sobre o reset\n \nQuando resetar seu personagem ele receberá:\n\n- Desbloqueio de novas armas \n- Novo hat (a cada certos resets) \n- Nova tag (de acordo com seus resets) \n- 1 GOLDEN POINT humano\n- 1 GOLDEN POINT zumbi\n \nRequerimentos:\n\n- Ser nível {1}\n- {2} pontos humanos e zumbi\nSeu personagem irá voltar para o level 1\n \nResets atuais: {3}"
+	}
+
+	"Reset menu option 1"
+	{
+		"en"	"Confirm RESET"
+		"es"	"Confirmar RESET"
+		"pt"	"Confirmar RESET"
+	}
+
+	// REGISTER MENU
+	"Register menu title"
+	{
+		"en"	"Your data will be saved\nZombie Survival by PIU-GAMES & MOOD GAMING"
+		"es"	"Guardado de datos automático para tus avances\nZombie Survival by PIU-GAMES & MOOD GAMING"
+	}
+
+	"Register menu option 1"
+	{
+		"en"	"Start playing"
+		"es"	"Ingresar a jugar"
+	}
+
+	"Register menu option 2"
+	{
+		"en"	"Server information"
+		"es"	"Información del servidor"
+	}
+
+	"Confirm"
+	{
+		"en"	"Confirm"
+		"es"	"Confirmar"
+	}
+
+	"Cancel"
+	{
+		"en"	"Cancel"
+		"es"	"Cancelar"
+	}
+
+	// ADD OPTIONAL DATA MENU
+	"Add optional data menu title email"
+	{
+		"en"	"Type your email in chat\nwithout any blank spaces.\nThen, press CONFIRM..\n "
+		"es"	"Escribe tu email en el chat\nsin espacios ni símbolos.\nLuego, pulsa CONFIRMAR..\n "
+	}
+
+	// ADD PASSWORD MENU
+	"Add optional data menu title password"
+	{
+		"en"	"Now type your password\n without any spaces.\nThen, press CONFIRM..\n "
+		"es"	"Ahora,\ningresa tu contraseña.\nLuego, pulsa CONFIRMAR..\n "
+	}
+
+	"Add optional data menu option 1"
+	{
+		"en"	"Confirm"
+		"es"	"Confirmar"
+	}
+
+	"Add optional data menu option 2"
+	{
+		"en"	"Cancel"
+		"es"	"Cancelar"
+	}
+
+	"Register message welcome"
+	{
+		"#format"	"{1:s}"
+		"en"	"Welcome {1}"
+		"es"	"Bienvenido {1}"
+		"pt" 	"Bem-vindo {1}"
+	}
+
+	// CHARACTERS MENU
+	"Characters menu display info 1 resets"
+	{
+		"#format"	"{1:s},{2:d},{3:d}"
+		"en"	"{1} (Level {2} | Reset {3})"
+		"es"	"{1} (Nivel {2} | Reset {3})"
+	}
+
+	"Characters menu display info 1 no resets"
+	{
+		"#format"	"{1:s},{2:d}"
+		"en"	"{1} (Level {2})"
+		"es"	"{1} (Nivel {2})"
+	}
+
+	"Characters menu display info 2"
+	{
+		"en"	"Create character"
+		"es"	"Crear personaje"
+	}
+
+	"Characters menu start game"
+	{
+		"en"	"Start playing"
+		"es"	"Jugar"
+	}
+
+	"Rename character menu title"
+	{
+		"#format"	"{1:s}"
+		"en"	"Change your name via Steam\n and then press CONFIRM\n \nPrice: {1} PIU-POINTS\n "
+		"es"	"Cambia tu nombre desde Steam\n y luego presiona CONFIRMAR\n \nCosto: {1} PIU-POINTS\n "
+	}
+
+	"Name successfully changed"
+	{
+		"#format"	"{1:s}"
+		"en"		"Congratulations! Your name has been changed to @lime{1}@default."
+		"es"		"Felicitaciones! Tu nombre ha sido cambiado a @lime{1}@default."
+	}
+
+	// CREATE CHARACTER MENU
+	"Create character menu title"
+	{
+		"en"	"Type in chat the name\nyou want for your character\n "
+		"es"	"Debes ingresar por chat el nombre\nque deseas para tu personaje\n "
+	}
+
+	"Create character add email"
+	{
+		"en"	"Add email (OPTIONAL)"
+		"es"	"Agregar email (OPCIONAL)"
+	}
+
+	"Email already associated"
+	{
+		"en"	"Email associated!"
+		"es"	"Email asociado!"
+		"pt"	"E-mail associado!"
+	}
+
+	"Create character add password"
+	{
+		"en"	"Add password (OPTIONAL)"
+		"es"	"Agregar contraseña (OPCIONAL)"
+	}
+
+	"Password already associated"
+	{
+		"en"	"Password associated!"
+		"es"	"Contraseña asociada!"
+		"pt" 	"Senha associada!"
+	}
+
+	"Email added"
+	{
+		"#format"	"{1:s}"
+		"en"	"Successfully added @lime{1}@default as your account email."
+		"es"	"Se ha agregado @lime{1}@default como tu dirección de email."
+	}
+
+	"Email in use"
+	{
+		"#format"	"{1:s}"
+		"en"	"@vlred{1}@default is already in use!"
+		"es"	"@vlred{1}@default ya está en uso!"
+	}
+
+	"Password added"
+	{
+		"#format"	"{1:s}"
+		"en"	"Successfully added @lime{1}@default as your account password."
+		"es"	"Se ha agregado @lime{1}@default como tu contraseña."
+	}
+
+	"Type email in chat"
+	{
+		"en"	"Press @limeY@default and type your email, @lredthis won't be seen in chat@default, then, press 1."
+		"es"	"Presiona @limeY@default y escribe tu correo, @lredNO SE VERÁ LO QUE ESCRIBAS@default, luego presiona 1."
+	}
+
+	"Type password in chat"
+	{
+		"en"	"Press @limeY@default and type your password, @lredthis won't be seen in chat@default, then, press 1."
+		"es"	"Presiona @limeY@default y escribe tu contraseña, @lredNO SE VERÁ LO QUE ESCRIBAS@default, luego presiona 1."
+	}
+
+	"Cancelling email addition"
+	{
+		"en"	"Cancelling email addition."
+		"es" 	"Cancelando adición de email."
+	}
+
+	"Cancelling password addition"
+	{
+		"en"	"Cancelling password addition."
+		"es" 	"Cancelando adición de contraseña."
+	}
+
+	"Translation ON"
+	{
+		"en"	"ON"
+		"es"	"SÍ"
+	}
+
+	"Translation OFF"
+	{
+		"en"	"OFF"
+		"es"	"NO"
+	}
+
+	"Create character use current name"
+	{
+		"en"	"Use current name"
+		"es"	"Usar nombre actual"
+	}
+
+	"Character is blocked"
+	{
+		"en"	"CHARACTER IS BLOCKED"
+		"es"	"PERSONAJE BLOQUEADO"
+	}
+
+	"Create character menu option 1"
+	{
+		"en"	"Confirm"
+		"es"	"Confirmar"
+	}
+
+	"Create character menu option 2"
+	{
+		"en"	"Cancel"
+		"es"	"Cancelar"
+	}
+
+	// CONFIGS MENU
+	"Configs menu title"
+	{
+		"en"	"Configs menu"
+		"es"	"Menú de AJUSTES"
+		"pt"	"Menu de AJUSTES"
+	}
+
+	// MUTE HURT SOUNDS
+	"Configs menu option 3 on"
+	{
+		"en"	"Mute hurt sounds:\n ON"
+		"es"	"Silenciar dolor zombie:\n Activado"
+		"pt" 	"Silenciar dor dos zumbis:\n Ativado"
+	}
+
+	"Configs menu option 3 off"
+	{
+		"en"	"Mute hurt sounds:\n OFF"
+		"es"	"Silenciar dolor zombie:\n Desactivado"
+		"pt" 	"Silenciar dor dos zumbis:\n Desativado"
+	}
+
+	// MUTE BULLETS
+	"Configs menu option 4 on"
+	{
+		"en"	"Mute others bullets:\n ON"
+		"es"	"Silenciar disparos ajenos:\n Activado"
+		"pt" 	"Silenciar disparos alheios:\n Ativado"
+	}
+
+	"Configs menu option 4 off"
+	{
+		"en"	"Mute others bullets:\n OFF"
+		"es"	"Silenciar disparos ajenos:\n Desactivado"
+		"pt" 	"Silenciar disparos alheios:\n Desativado"
+	}
+
+	// PARTY INVITES
+	"Configs menu option 5 on"
+	{
+		"en"	"Party invites:\n ON"
+		"es"	"Invitaciones de party:\n Activado"
+		"pt" 	"Convite para party:\n Ativado"
+	}
+
+	"Configs menu option 5 off"
+	{
+		"en"	"Party invites:\n OFF"
+		"es"	"Invitaciones de party:\n Desactivado"
+		"pt" 	"Convite para party:\n Desativado"
+	}
+
+	"Configs menu option 6"
+	{
+		"en"	"HUD color"
+		"es"	"Color del HUD"
+		"pt" 	"Cor do HUD"
+	}
+
+	"Configs menu option 7"
+	{
+		"en"	"Nightvision color"
+		"es"	"Color de visión nocturna"
+		"pt"	"Cor da visão noturna"
+	}
+
+	"Configs menu option 8"
+	{
+		"en"	"Rename character"
+		"es"	"Renombrar personaje"
+		"pt"	"Renomear personagem"
+	}
+
+	// TAGS MENU
+	"Tags menu title"
+	{
+		"en"	"Select your TAG\n "
+		"es"	"Selecciona tu TAG\n "
+	}
+
+	// HATS MENU
+	"Hats menu title"
+	{
+		"en"	"Select your HAT\n "
+		"es"	"Selecciona tu HAT\n "
+	}
+
+	// BUY HATS MENU
+	"Buy hats menu title"
+	{
+		"#format"	"{1:d}"
+		"en"	"Hats menu\nPIU-Points: {1}\n "
+		"es"	"Menú de HATS\nPIU-Points: {1}\n "
+	}
+
+	"Buy hats menu option obtained"
+	{
+		"#format"	"{1:s}"
+		"en"	"{1} (OWNED)"
+		"es"	"{1} (OBTENIDO)"
+	}
+
+	// MERCENARY MENU
+	"Mercenary menu option 1"
+	{
+		"en"	"Achievements"
+		"es"	"Logros"
+	}
+
+	"Mercenary menu option 2"
+	{
+		"en"	"Tags"
+		"es"	"Tags"
+	}
+
+	"Mercenary menu option 3"
+	{
+		"en"	"My hats"
+		"es"	"Mis hats"
+	}
+
+	"Mercenary menu option 4"
+	{
+		"en"	"Buy hats"
+		"es"	"Comprar hats"
+	}
+
+	// TOP 50
+	"Top menu title"
+	{
+		"en"	"TOP 50 best players\n "
+		"es"	"TOP 50 mejores jugadores\n "
+	}
+
+	// GRENADE PACKS MENU
+	"Grenade packs menu title"
+	{
+		"en"	"Select your grenade pack\n "
+		"es"	"Selecciona tu pack de granadas\n "
+		"pt" 	"Selecione seu pack de granadas\n "
+	}
+
+	"Grenade packs menu fire"
+	{
+		"#format"	"{1:d}"
+		"en"	" Fire: {1}\n"
+		"es"	" Fuego: {1}\n"
+	}
+
+	"Grenade packs menu ice"
+	{
+		"#format"	"{1:d}"
+		"en"	" Ice: {1}\n"
+		"es"	" Hielo: {1}\n"
+	}
+
+	"Grenade packs menu flare"
+	{
+		"#format"	"{1:d}"
+		"en"	" Flare: {1}\n"
+		"es"	" Luz: {1}\n"
+	}
+
+	"Grenade packs menu aura"
+	{
+		"#format"	"{1:d}"
+		"en"	" Aura: {1}\n"
+		"es"	" Aura: {1}\n"
+	}
+
+	"Grenade packs menu void"
+	{
+		"#format"	"{1:d}"
+		"en"	" Void: {1}\n"
+		"es"	" Void: {1}\n"
+	}
+
+	// HUD COLOR MENU
+	"HUD color menu title"
+	{
+		"en"	"Select your HUD color\n "
+		"es"	"Selecciona el color de tu HUD\n "
+	}
+
+	// NIGHTVISION COLOR MENU
+	"Nightvision color menu title"
+	{
+		"en"	"Select your nightvision color\n "
+		"es"	"Selecciona el color de tu visión nocturna\n "
+	}
+
+	// COLORS
+	"Color white"
+	{
+		"en"	"White"
+		"es"	"Blanco"
+		"pt"	"Branco"
+	}
+
+	"Color red"
+	{
+		"en"	"Red"
+		"es"	"Rojo"
+		"pt"	"Vermelho"
+	}
+
+	"Color yellow"
+	{
+		"en"	"Yellow"
+		"es"	"Amarillo"
+		"pt"	"Amarelo"
+	}
+
+	"Color blue"
+	{
+		"en"	"Blue"
+		"es"	"Azul"
+		"pt" 	"Azul"
+	}
+
+	"Color light blue"
+	{
+		"en"	"Light blue"
+		"es"	"Celeste"
+		"pt"	"Azul claro"
+	}
+
+	"Color orange"
+	{
+		"en"	"Orange"
+		"es"	"Naranja"
+		"pt"	"Laranja"
+	}
+
+	"Color green"
+	{
+		"en"	"Green"
+		"es"	"Verde"
+		"pt"	"Verde"
+	}
+
+	"Color purple"
+	{
+		"en"	"Purple"
+		"es"	"Violeta"
+		"pt"	"Roxo"
+	}
+
+	// You've been infected
+	"Infected infection grenade"
+	{
+		"en" 	"You've been infected by an infection grenade"
+		"es"	"Fuiste infectado por una granada de infección"
+	}
+
+	// TEST VIP
+	"VIP test menu title"
+	{
+		"en"	"Test VIP x3 (7 days)\n "
+		"es"	"VIP x3 de prueba (7 días)\n "
+	}
+
+	"VIP test menu option 1"
+	{
+		"en"	"Enable VIP test"
+		"es"	"Activar vip de prueba"
+	}
+
+	"Armageddon announcement 1"
+	{
+		"en"	"PREPARE FOR THE BATTLE"
+		"es"	"PREPARADOS PARA LA BATALLA"
+	}
+
+	"Armageddon announcement 2"
+	{
+		"en"	"ARMAGEDDON!"
+		"es"	"¡MODO ARMAGEDDON!"
+	}
+
+	"Warmup finishes in"
+	{
+		"#format"	"{1:d}"
+		"en"	"Warmup round finishes in {1}"
+		"es"	"El calentamiento termina en {1}"
+	}
+
+	"Warmup round finished"
+	{
+		"en"	"Warmup round finished"
+		"es"	"Ronda de calentamiento finalizada"
+	}
+
+	"Your next primary weapon will be"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your next primary @lblueweapon@default will be: @lblue{1}@default."
+		"es"	"Tu próxima @lbluearma primaria@default será: @lblue{1}@default."
+	}
+
+	"Your next secondary weapon will be"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your next secondary @lblueweapon@default will be: @lblue{1}@default."
+		"es"	"Tu próxima @lbluearma secundaria@default será: @lblue{1}@default."
+	}
+
+	"Your next human class will be"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your next @lbluehuman class@default will be: @lblue{1}@default."
+		"es"	"Tu próxima @lblueclase humana@default será: @lblue{1}@default."
+	}
+
+	"Your next zombie class will be"
+	{
+		"#format"	"{1:s}"
+		"en"	"Your next @redzombie class@default will be: @red{1}@default."
+		"es"	"Tu próxima @redclase zombie@default será: @red{1}@default."
+	}
+
+	"Your next grenade pack will be"
+	{
+		"#format"	"{1:d}"
+		"en"	"Your next @lbluegrenade pack@default will be the number:@lblue{1}@default."
+		"es"	"Tu próximo @lbluepack de granadas@default será el número:@lblue{1}@default."
+	}
+
+	"Party invitation menu title"
+	{
+		"en"	"Send a party invitation\n "
+		"es"	"Enviar invitación de party\n "
+	}
+
+	"Party menu title"
+	{
+		"en"	"Party menu"
+		"es"	"Menú de party"
+		"pt"	"Menu de party"
+	}
+
+	"Party menu option 1"
+	{
+		"en"	"Send party invitation"
+		"es"	"Enviar invitación de party"
+	}
+
+	"Party menu option 2 enable"
+	{
+		"en"	"Enable member kicking"
+		"es"	"Activar expulsión de miembros"
+	}
+
+	"Party menu option 2 disable"
+	{
+		"en"	"Disable member kicking"
+		"es"	"Desactivar expulsión de miembros"
+	}
+
+	"Party menu option 3"
+	{
+		"en"	"Leave party"
+		"es"	"Salir de la party"
+	}
+
+	"Kick client from party"
+	{
+		"#format"	"{1:s},{2:d},{3:d}"
+		"en"		"KICK {1} (Level: {2} | Reset: {3})"
+		"es"		"EXPULSAR A {1} (Level: {2} | Reset: {3})"
+	}
+
+	"Vip purchase menu title"
+	{
+		"#format"	"{1:d}"
+		"en"	"Purchase your desired VIP membership\nVIP membership offers augmented ammopacks & points gain\nPIU Points: {1}\n "
+		"es"	"Adquiere tu membresía VIP deseada\nEl VIP aumentará tu ganancia de Ammopacks y puntos!\nPIU Points: {1}\n "
+		"pt"	"Adquira o  VIP desejado\nO VIP aumentará seus ganhos de ammopacks e de pontos!\nPIU Points: {1}\n "
+	}
+
+	"Vip purchase menu option"
+	{
+		"#format"	"{1:s},{2:d}"
+		"en"	"{1} ({2} PIU Points)"
+		"es"	"{1} ({2} PIU Points)"
+	}
+
+	"Vip purchase successful"
+	{
+		"#format"	"{1:s}"
+		"en"	"@purpleCongratulations!@default You have acquired your @golden{1}@default. You don't need to reconnect to activate it."
+		"es"	"@purple¡Felicitaciones!@default Adquiriste tu @golden{1}@default. No necesitas reconectar para activarlo"
+	}
+
+	"You are already vip"
+	{
+		"#format"	"{1:d}"
+		"en"		"You are already VIP X{1}"
+		"es"		"Ya posees VIP X{1}"
+	}
+
+	"Vip purchase failed"
+	{
+		"en"	"You don't meet the requirements to purchase this VIP."
+		"es"	"No cumples los requerimientos para comprar este VIP."
+	}
+
+	"Unlocked weapon"
+	{
+		"en"	"You've unlocked a @goldennew weapon@default."
+		"es"	"Nueva arma @goldendesbloqueada@default."
+	}
+
+	"Unlocked grenade pack"
+	{
+		"en"	"Grenade pack @goldenunlocked@default."
+		"es"	"Pack de granadas @goldendesbloqueado@default."
+	}
+
+	"Unlocked zclass"
+	{
+		"en"	"You've unlocked a new @goldenzombie class@default."
+		"es"	"Nueva @goldenclase zombie@default desbloqueada."
+	}
+
+	"Unlocked hclass"
+	{
+		"en"	"You've unlocked a new @goldenhuman class@default."
+		"es"	"Nueva @goldenclase humana@default desbloqueada."
+	}
+
+
+	"Obtained human points"
+	{
+		"#format"	"{1:d}"
+		"en"	"@purpleGood job!@default You obtained @vlred{1}@default @goldenhuman@default points!"
+		"es"	"@purpleBien hecho!@default has ganado @vlred{1}@default puntos @goldenhumanos@default!"
+	}
+
+	"Obtained zombie points"
+	{
+		"#format"	"{1:d}"
+		"en"	"@purpleGood job!@default You obtained @vlred{1}@default @goldenzombie@default points!"
+		"es"	"@purpleBien hecho!@default has ganado @vlred{1}@default puntos @goldenzombie@default!"
+	}
+
+	"Obtained human points vip"
+	{
+		"#format"	"{1:d}"
+		"en"	"@purpleVIP!@default Obtained @vlred{1}@default @goldenhuman@default points!"
+		"es"	"@purpleVIP!@default Ganaste @vlred{1}@default puntos @goldenhumanos@default!"
+	}
+
+	"Obtained zombie points vip"
+	{
+		"#format"	"{1:d}"
+		"en"	"@purpleVIP!@default Obtained @vlred{1}@default @goldenzombie@default points!"
+		"es"	"@purpleVIP!@default Ganaste @vlred{1}@default puntos @goldenzombie@default!"
+	}
+
+	"Selected vip info"
+	{
+		"#format"	"{1:s},{2:d},{3:d},{4:d}"
+		"en"	"Please, confirm your purchase:\n \nItem: {1}\n- Duration: {2} days\n- Experiencie (AP) Gain: x{3}\n- Human & Zombie points gain: x{4}\n- VIP color in chat\n\n "
+		"es"	"Por favor, confirma tu compra:\n \nItem: {1}\n- Duración: {2} días\n- Ganancia de experiencia (AP): x{3}\n- Ganancia puntos Humanos y Zombie: x{4}\n- Color VIP en el chat\n\n "
+	}
+
+	"Obtained piu points"
+	{
+		"#format"	"{1:d}"
+		"en"	"Congratulations, you obtained @golden{1} PIU Points@default!"
+		"es"	"Felicidades, obtuviste @golden{1} PIU Points@default!"
+	}
+
+	"You are first zombie"
+	{
+		"en"	"You are the first zombie, you've got @goldenmore life and an infection grenade@default, press 4 to pick it!"
+		"en"	"Eres el primer zombie, tienes @goldenmás vida y una granada de infección@default, ¡presiona 4 para usarla!"
+	}
+
+	"You have a bazooka"
+	{
+		"en"	"You are nemesis, you've got @goldena bazooka@default to destroy your enemies, press 1 to pick it!"
+		"en"	"Eres nemesis, tienes @goldenuna bazooka@default para destruir a tus enemigos, ¡presiona 1 para usarla!"
+	}
+
+	"Received piupoints for waiting"
+	{
+		"#format"	"{1:d}"
+		"en"	"Congratulations! You received @golden{1} PIU-Points@default for waiting while users connect!"
+		"en"	"¡Felicitaciones! Recibiste @golden{1} PIU-Points@default por aguardar mientras se conectan más usuarios."
+	}
+
+	"Earn piupoints for waiting"
+	{
+		"#format"	"{1:d}"
+		"en"	"While waiting more users, each player will receive @goldenPIU-Points@default every {1} minutes."
+		"es"	"Mientras esperas más jugadores, recibirás @goldenPIU-Points@default cada {1} minutos."
+	}
+
+	"Zombie damage dealt"
+	{
+		"#format"	"{1:d}"
+		"en"	"Damage dealt: <font color='#ff0000'>{1}</font>"
+		"es"	"Daño realizado: <font color='#ff0000'>{1}</font>"
+	}
+
+	"Destroyed lasermine reward"
+	{
+		"#format"	"{1:d}"
+		"en"	"You received @golden{1} AP@default for destroying a lasermine."
+		"es"	"Recibiste @golden{1} AP@default por destruir una lasermine."
+	}
+
+	"Cannot use antidote when less than x zombies"
+	{
+		"#format"	"{1:d}"
+		"en"	"Cannot use antidote with less than @golden{1}@default zombies alive!"
+		"es"	"No puedes utilizar antídoto cuando haya menos de @golden{1}@default zombies!"
+	}
+
+	"Party under development"
+	{
+		"en"	"Party under development."
+		"es"	"Party en desarrollo."
+	}
+
+	"Not enought online users to use party"
+	{
+		"en"	"Not enought online users to use party."
+		"es"	"No hay suficientes usuarios para utilizar party."
+	}
+
+	"Swarm mode stats"
+	{
+		"#format" 	"{1:d},{2:d},{3:d},{4:d}"
+		"en"	"Humans alive: {1}\nZombies alive: {2}\nHuman rewards: {3} AP\nZombie rewards: {4} AP"
+		"es"	"Humanos restantes: {1}\nZombies restantes: {2}\nGanancias humanas: {3} AP\nGanancias zombie: {4} AP"
+	}
+
+	"Swarm human reward"
+	{
+		"#format" 	"{1:d}"
+		"en"	"Congratulations, humans won, your part of the reward is @golden{1}@default AP!"
+		"es"	"Felicidades, los humanos ganan, tu parte de recompensa son @golden{1}@default AP!"
+	}
+
+	"Swarm zombie reward"
+	{
+		"#format" 	"{1:d}"
+		"en"	"Congratulations, zombies won, your part of the reward is @golden{1}@default AP!"
+		"es"	"Felicidades, los zombies ganan, tu parte de recompensa son @golden{1}@default AP!"
+	}
+
+	"Zombie hp per death received"
+	{
+		"#format"	"{1:d}"
+		"en"	"You received an additional of @vlred{1}@default zombie HP to compensate your deaths."
+		"es"	"Recibiste un adicional de @vlred{1}@default de vida zombie para compensar muertes."
+	}
+
+	"You leveled up to"
+	{
+		"#format"	"{1:d}"
+		"en" 		"You leveled up to @lblue{1}@default!"
+		"es"		"Subiste al nivel @lblue{1}@default!"
+	}
+
+	"You leveled down to"
+	{
+		"#format"	"{1:d}"
+		"en" 		"You leveled down to @vlred{1}@default."
+		"es"		"Bajaste al nivel @vlred{1}@default."
+	}
+
+	"Infection"
+	{
+		"en"		"INFECTION!"
+		"es"		"INFECCIÓN!"
+	}
+
+	"Assassination"
+	{
+		"en"		"ASSASSINATION!"
+		"es"		"ASESINATO!"
+	}
+
+	"Zombie combo hud"
+	{
+		"#format"	"{1:s}"
+		"en"		"\n{1} ammopacks obtained"
+		"es"		"\nObtienes: {1} ammopacks"
+	}
+}
