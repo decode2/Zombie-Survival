@@ -27,4 +27,6 @@ I would really like to thank:
 - Alliedmods community: Took a lot of code from them, qubka e.g. (he created and posted the zombie plague for CSGO) did a lot that we took from his code and adapted to ours.
 - Everyone that sees some part of code that is really similar to what he/she has posted on AlliedModders.
 
+THERE IS A LOT OF CODE THAT I COULDN'T IMPLEMENT CORRECTLY, SO, YOU MIGHT HAVE TO CHECK BY YOURSELF IF YOU WANT TO DELETE IT.
+
 From now on, i will start uploading files so you can use them and make your own server using this as a base.
