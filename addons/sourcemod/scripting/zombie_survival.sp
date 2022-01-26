@@ -111,6 +111,7 @@ public Plugin myinfo ={
 
 public void OnPluginStart(){
 	
+	CreateConVar("zs_version", PLUGIN_VERSION, "Standard plugin version ConVar. Please don't change it!", FCVAR_REPLICATED|FCVAR_NOTIFY|FCVAR_DONTRECORD);
 	
 	// MOVER A ZPLAYER ON INIT (CLASSES ON INIT EN REALIDAD)
 	ToolsOnCvarInit();
