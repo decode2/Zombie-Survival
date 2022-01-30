@@ -34,3 +34,7 @@ From now on, i will start uploading files so you can use them and make your own 
 Resources: https://drive.google.com/file/d/1nn8xdjC_a0Ve3VAJZySA1-ZWIBVXgVX2/view?usp=sharing
 
 Maps my community made: https://drive.google.com/file/d/1szC49VXfwDPMumN9dMjE5yvhwVS9dlej/view?usp=sharing
+
+MySQL initialization script for the DataBase: https://drive.google.com/file/d/1UpdIFB_tkAS2piAEYcmdeoLtrUALBj9o/view?usp=sharing
+
+Alliedmods post: https://forums.alliedmods.net/showthread.php?p=2769407#post2769407 -> READ HERE FOR INSTRUCTIONS!
