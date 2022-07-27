@@ -661,7 +661,7 @@ stock int obtainBaseProfitPerLasermineKill(int attacker, int owner){
 	// Calculate base reward without applying any DIFF augment
 	//int baseReward = RoundToNearest(float(LASERMINE_KILL_SCALAR_REWARD) * float(levelBonus) * ownerUpgradeBonus);
 	
-	int baseReward = LASERMINE_KILL_SCALAR_REWARD * Round ToZero(resetBonus+levelBonus*ownerUpgradeBonus);
+	int baseReward = LASERMINE_KILL_SCALAR_REWARD * RoundToZero(resetBonus+levelBonus*ownerUpgradeBonus);
 	
 	// Calculate how much reset difference exists between attacker & victim
 	int resetDiff = ownerReset - attackerReset;
