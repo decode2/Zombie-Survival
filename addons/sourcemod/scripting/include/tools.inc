@@ -1039,6 +1039,7 @@ stock void ToolsSetParent(int entity, int parent)
  * @param sAttach           The attachment name.
  * @return                  True or false.
  **/
+#pragma unused ToolsLookupAttachment
 bool ToolsLookupAttachment(int entity, char[] sAttach)
 {
 	return (hasLength(sAttach) && SDKCall(hSDKCallLookupAttachment, entity, sAttach));
@@ -1052,6 +1053,7 @@ bool ToolsLookupAttachment(int entity, char[] sAttach)
  * @param vPosition         The origin output.
  * @param vAngle            The angle output.
  **/
+#pragma unused ToolsGetAttachment
 void ToolsGetAttachment(int entity, char[] sAttach, float vPosition[3], float vAngle[3])
 {
 	// Validate windows
@@ -1076,6 +1078,7 @@ void ToolsGetAttachment(int entity, char[] sAttach, float vPosition[3], float vA
  * @param sAnim             The sequence name.
  * @return                  The sequence index.
  **/
+#pragma unused ToolsLookupSequence
 int ToolsLookupSequence(int entity, char[] sAnim)
 {
 	// Validate windows
@@ -1103,6 +1106,7 @@ int ToolsLookupSequence(int entity, char[] sAnim)
  * @param sPose             The pose name.
  * @return                  The pose parameter.
  **/
+#pragma unused ToolsLookupPoseParameter
 int ToolsLookupPoseParameter(int entity, char[] sPose)
 {
 	// Gets 'CStudioHdr' class
@@ -1121,6 +1125,7 @@ int ToolsLookupPoseParameter(int entity, char[] sPose)
  * @param entity            The entity index.
  * @param sAnim             The sequence name.
  **/
+#pragma unused ToolsResetSequence
 void ToolsResetSequence(int entity, char[] sAnim) 
 { 
 	// Find the sequence index
@@ -1148,6 +1153,7 @@ void ToolsResetSequence(int entity, char[] sAnim)
  * @param entity            The entity index.
  * @return                  The sequence count.
  **/
+#pragma unused ToolsGetSequenceCount
 int ToolsGetSequenceCount(int entity)
 {
 	// Gets 'CStudioHdr' class
@@ -1186,6 +1192,7 @@ int ToolsGetSequenceCount(int entity)
  * @param iSequence         The sequence index.
  * @return                  The activity index.
  **/
+#pragma unused ToolsGetSequenceActivity
 int ToolsGetSequenceActivity(int entity, int iSequence)
 {
 	return SDKCall(hSDKCallGetSequenceActivity, entity, iSequence);
@@ -1207,6 +1214,7 @@ Address ToolsGetStudioHdrClass(int entity)
  * 
  * @param entity            The entity index.
  **/
+#pragma unused ToolsUpdateTransmitState
 void ToolsUpdateTransmitState(int entity)
 {
 	SDKCall(hSDKCallUpdateTransmitState, entity);
@@ -1237,6 +1245,8 @@ bool ToolsIsBSPModel(int entity)
  * @param iSoundType        The sound type.
  * @param flRecoilIndex     The recoil variable.
  **/
+
+#pragma unused ToolsFireBullets
 void ToolsFireBullets(int client, int weapon, float vPosition[3], float vAngle[3], int iMode, int iSeed, float flInaccuracy, float flSpread, float flFishTail, int iSoundType, float flRecoilIndex)
 {
 	// Create a bullet decal
@@ -1263,7 +1273,7 @@ void ToolsFireBullets(int client, int weapon, float vPosition[3], float vAngle[3
 	if (gServerData.Platform == OS_Windows)
 	{
 		// Write a new function in free memory and call it
-		memcpy(pFireBullets, ASMTRAMPOLINE, sizeof(ASMTRAMPOLINE));
+		//memcpy(pFireBullets, ASMTRAMPOLINE, sizeof(ASMTRAMPOLINE));
 	}
 	
 	// Emulate bullet_shot on the server
@@ -1279,6 +1289,7 @@ void ToolsFireBullets(int client, int weapon, float vPosition[3], float vAngle[3
  * @param client            The client index.
  * @param iDuration         The duration in the seconds.
  **/
+#pragma unused ToolsSetProgressBarTime
 void ToolsSetProgressBarTime(int client, int iDuration)
 {
 	// Gets the current time
@@ -1299,6 +1310,7 @@ void ToolsSetProgressBarTime(int client, int iDuration)
  * @param client            The client index.
  * @param iDuration         The duration in the seconds.
  **/
+#pragma unused ToolsResetProgressBarTime
 void ToolsResetProgressBarTime(int client)
 {
 	// Resets the progress bar

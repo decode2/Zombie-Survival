@@ -77,6 +77,7 @@ char sParamError[7][PLATFORM_LINE_LENGTH] = {
  * @param cSeparator        The separator character.
  * @return                  Returns error code if parsing error.
  **/
+#pragma unused ParamParseString
 int ParamParseString(ArrayList &arrayBuffer, char[] sParamString, int iMaxLen, char cSeparator)
 {
 	/*
@@ -222,6 +223,7 @@ int ParamParseString(ArrayList &arrayBuffer, char[] sParamString, int iMaxLen, c
  * @param endPos            End position of string to extract.
  * @return                  The number of cells written.
  **/
+#pragma unused StrExtract
 int StrExtract(char[] sBuffer, char[] sSource, int startPos, int endPos)
 {
 	// Calculate string length. Also add space for null terminator
@@ -245,6 +247,7 @@ int StrExtract(char[] sBuffer, char[] sSource, int startPos, int endPos)
  * @param cSeparator        The separator character.
  * @return                  True or false.
  **/
+#pragma unused StrContain
 bool StrContain(char[] sBuffer, char[] sSource, char cSeparator)
 {
 	// i = char index
@@ -290,6 +293,7 @@ bool StrContain(char[] sBuffer, char[] sSource, char cSeparator)
  * @param cSymbol           The character to search for.
  * @return                  The amount of characters in the string, or -1 if the characters were not found.
  */
+#pragma unused CountCharInString
 int CountCharInString(char[] sBuffer, char cSymbol)
 {
 	// Initialize index
@@ -332,6 +336,7 @@ void StringToLower(char[] sBuffer)
  *
  * @param hArrayList        The array that is being shuffle.
  **/
+#pragma unused ArrayShuffle
 void ArrayShuffle(ArrayList hArrayList)
 {
 	// i = client index

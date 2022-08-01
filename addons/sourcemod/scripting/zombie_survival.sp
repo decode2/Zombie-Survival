@@ -66,9 +66,9 @@
 #include <global>
 #include <mercenary>
 
-#define DISCORD_LINK_PIU "https://discord.gg/UXCpgEHURw"
-#define WHATSAPP_LINK_PIU "https://chat.whatsapp.com/L7MYl3cEn4lF7C1NvVvhL2"
-#define INSTAGRAM_LINK_PIU "www.instagram.com/piugames00/"
+#define DISCORD_LINK_PIU "your-discord-here"
+#define WHATSAPP_LINK_PIU "your-whatsapp-group-link-here"
+#define INSTAGRAM_LINK_PIU "your-instagram-here"
 
 // Each time a human deals X dmg, gets Y AP
 #define DAMAGE_DEALT_DAMAGE_REQUIRED_TO_EARN_AP 5000
