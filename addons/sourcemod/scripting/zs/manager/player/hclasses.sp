@@ -184,6 +184,7 @@ stock int CreateHClass(const char[] name, const char[] model, const char[] arms,
 	return class.id;
 }*/
 
+/*
 stock int HClasses_FindForPlayer(int level, int reset){
 	
 	int value = 0;
@@ -203,4 +204,4 @@ stock int HClasses_FindForPlayer(int level, int reset){
 	}
 	
 	return value;
-}
+}*/

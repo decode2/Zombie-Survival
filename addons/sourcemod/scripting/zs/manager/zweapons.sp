@@ -354,6 +354,7 @@ public void Weapons_OnWeaponCreated(int weapon){
  * @param sName             The weapon name.
  * @return                  The array index containing the given weapon name.
  **/
+/*
 stock int WeaponsNameToIndex(char[] sName){
 	
 	// Initialize name char
@@ -375,7 +376,7 @@ stock int WeaponsNameToIndex(char[] sName){
 	
 	// Name doesn't exist
 	return -1;
-}
+}*/
 
 stock int CreateNetworkedWeaponEnt(int client, int weaponArrayID){
 	int iEntWeapon;

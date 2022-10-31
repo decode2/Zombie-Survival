@@ -239,7 +239,7 @@ void WeaponSDKOnInit(/*void*/) /// @link https://www.unknowncheats.me/forum/coun
 	
 	/*_________________________________________________________________________________________________________________________________________*/
 }
-
+/*
 stock int IsPlayerHasWeapon(int clientIndex, int weaponID){
 	
 	// i = weapon number
@@ -264,7 +264,7 @@ stock int IsPlayerHasWeapon(int clientIndex, int weaponID){
 		
 	// If wasn't found
 	return -1;
-}
+}*/
 
 stock int readWeaponNetworkedIndex(int weaponIndex){
 	
@@ -494,6 +494,8 @@ stock void RemoveWeapon(int clientIndex, int weaponIndex, SlotType slotType = Sl
  * @param vBulletPosition   The position of a bullet hit.
  * @param flDurationTime    The duration of life.
  **/
+
+/*
 stock void CreateWeaponTracer(int clientIndex, int weaponIndex, char[] sAttach1, char[] sAttach2, char[] sEffect, float vBulletPosition[3], float flDurationTime)
 {
 	// Validate name
@@ -505,8 +507,8 @@ stock void CreateWeaponTracer(int clientIndex, int weaponIndex, char[] sAttach1,
 	#define ClientEnd  1
 	#define ViewerSrt  2
 	#define ViewerEnd  3
-	/** Regards to Phoenix **/
-	/** Dont ask me how it works ;) **/
+	// Regards to Phoenix
+	// Dont ask me how it works ;)
 	
 	// Gets client view/world model
 	int viewModel = Weapon_GetViewModelIndex(clientIndex, -1);
@@ -587,7 +589,7 @@ stock void CreateWeaponTracer(int clientIndex, int weaponIndex, char[] sAttach1,
 		SetVariantString(sAttach1);
 		AcceptEntityInput(entityIndex[ClientSrt], "SetParentAttachment", entityIndex[ClientSrt], entityIndex[ClientSrt]);
 		
-		/*______________________________________________________________________________*/
+		//______________________________________________________________________________
 		
 		// Hook entity callbacks 
 		SDKHook(entityIndex[ClientEnd], SDKHook_SetTransmit, TracerClientTransmit);
@@ -606,7 +608,7 @@ stock void CreateWeaponTracer(int clientIndex, int weaponIndex, char[] sAttach1,
 		UTIL_RemoveEntity(entityIndex[ViewerSrt], flDurationTime);
 	}
 }
-
+*/
 /**
  * @brief Create the kickback effect to a weapon .
  *
@@ -791,6 +793,8 @@ stock void WeaponsSetAnimating(int weaponIndex, float flDelay){
  * @param weaponIndex       The weapon index.
  * @param bRemove           True to delete weapon or false to just drop weapon.
  **/
+
+/*
 stock void WeaponsDrop(int clientIndex, int weaponIndex, bool bRemove = false){
 	
 	// Validate weapon
@@ -815,7 +819,7 @@ stock void WeaponsDrop(int clientIndex, int weaponIndex, bool bRemove = false){
 			CS_DropWeapon(clientIndex, weaponIndex, false, false);
 		}
 	}
-}
+}*/
 
 /**
  * @brief Pick up a weapon.
@@ -825,6 +829,8 @@ stock void WeaponsDrop(int clientIndex, int weaponIndex, bool bRemove = false){
  * @param iD                The weapon id.
  * @param mSlot             The slot index.
  **/
+
+/*
 stock void WeaponsPickUp(int clientIndex, int weaponIndex, int iD, SlotType mSlot){
 	
 	// Gets weapon index
@@ -837,7 +843,7 @@ stock void WeaponsPickUp(int clientIndex, int weaponIndex, int iD, SlotType mSlo
 		AcceptEntityInput(weaponIndex, "Kill"); /// Destroy
 		WeaponsGive(clientIndex, iD);
 	}
-}
+}*/
 
 /**
  * @brief Remove all weapons and give default weapon.
@@ -845,6 +851,8 @@ stock void WeaponsPickUp(int clientIndex, int weaponIndex, int iD, SlotType mSlo
  * @param clientIndex       The client index.
  * @return                  True on success, false if client has access. 
  **/
+
+/*
 stock bool WeaponsRemoveAll(int clientIndex){
 	
 	// i = weapon number
@@ -875,7 +883,7 @@ stock bool WeaponsRemoveAll(int clientIndex){
 	
 	// Return on success
 	return true;
-}
+}*/
 
 /**
  * @brief Give weapon from a id.
@@ -884,6 +892,8 @@ stock bool WeaponsRemoveAll(int clientIndex){
  * @param iD                The weapon id.
  * @return                  The weapon index.
  **/
+
+/*
 stock int WeaponsGive(int clientIndex, int iD){
 	
 	// Initialize index
@@ -1010,7 +1020,7 @@ stock int WeaponsGive(int clientIndex, int iD){
 	
 	// Return on success
 	return weaponIndex;
-}
+}*/
 
 /**
  * @brief Returns index if the player has a weapon.

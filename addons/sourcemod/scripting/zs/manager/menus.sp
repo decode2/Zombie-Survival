@@ -3374,11 +3374,11 @@ public int MenuPartyInvitationHandler(Menu menu, MenuAction action, int client, 
 			
 			if(IsPlayerExist(target.id) && target.bLogged){
 				
-				if(target.bReceivePartyInv && !gClientData[target].bInParty){
+				if(target.bReceivePartyInv && !gClientData[target.id].bInParty){
 					showMenuInvParty(invited, client);
 					PrintToChat(client, "%s Invitación de \x03party enviada a \x05%N\x01.", SERVERSTRING, invited);
 				}
-				else if(gClientData[target].bInParty){
+				else if(gClientData[target.id].bInParty){
 					PrintToChat(client, "%s \x05%N\x01 ya se encuentra en \x03party\x01!", SERVERSTRING, invited);
 				}
 				else{

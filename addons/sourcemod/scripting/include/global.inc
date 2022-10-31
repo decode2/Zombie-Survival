@@ -306,6 +306,7 @@ stock bool ScreenFade(int client, float duration, float holdtime, int flag = FFA
 	}
 }
 
+/*
 // Player already has weapons check utility
 stock bool Client_HasWeapon(int client, const char[] className){
 	
@@ -351,7 +352,7 @@ stock bool Entity_ClassNameMatches(int entity, const char[] className, bool part
 	}
 
 	return StrEqual(entity_className, className);
-}
+}*/
 
 //=====================================================
 //					GLOW SUPPORT

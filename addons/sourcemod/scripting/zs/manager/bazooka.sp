@@ -39,16 +39,16 @@
 #define _call1.%0(%1,%2)		\
 								\
 	Bazooka_On%0				\
-	(						   	\
-		%1,					 	\
-		%2,					 	\
+	(							\
+		%1,						\
+		%2,						\
 								\
 		GetEntProp(%2, Prop_Send, "m_iClip1"), \
 								\
 		GetEntProp(%2, Prop_Send, "m_iPrimaryReserveAmmoCount"), \
 								\
-		GetGameTime()		   	\
-	) 
+		GetGameTime()			\
+	)
 
 /**
  * @endsection

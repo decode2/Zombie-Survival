@@ -50,13 +50,15 @@ public void LoadTagsCallback(Database db, DBResultSet results, const char[] erro
 	}
 }
 
-stock bool Tags_isEntryValid(const char[] input, const char[] sError){
+stock bool Tags_isEntryValid(char[] input, char[] sError){
 	
-	if (!(TAGS_MINLEN < strlen(input) < TAGS_MAXLEN)){
+	int len = strlen(input);
+
+	if (!(TAGS_MINLEN < len < TAGS_MAXLEN)){
 		return false;
 	}
 	
-	if (input[0] != "[" || input[strlen(input)-1] != "]"){
+	if (!StrEqual(input[0], "[") || !StrEqual(input[len-1], "]")){
 		return false;
 	}
 	
@@ -81,10 +83,10 @@ stock bool Tags_isEntryValid(const char[] input, const char[] sError){
 }
 stock bool stringHasSymbols(const char[] input){
 	
-	int len = strlen(input)
+	int len = strlen(input);
 	bool hasSymbols = false;
 	for (int i; i < len; i++){
-		if (!IsCharAlpha(input[i]) && !IsCharNumeric(input[i]) && input[i] != "-" && input[i] != "[" && input[i] != "]"){
+		if (!IsCharAlpha(input[i]) && !IsCharNumeric(input[i]) && !StrEqual(input[i], "-") && !StrEqual(input[i], "[") && !StrEqual(input[i], "]")){
 			hasSymbols = true;
 			break;
 		}

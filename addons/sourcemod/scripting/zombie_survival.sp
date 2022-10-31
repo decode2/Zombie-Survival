@@ -339,7 +339,6 @@ public void OnPluginStart(){
 	RegAdminCmd("givemenades", givemenades, ADMFLAG_ROOT);
 	RegAdminCmd("aiminfect", AimInfect, ADMFLAG_ROOT);
 	RegAdminCmd("aimhumanize", AimHumanize, ADMFLAG_ROOT);
-	RegAdminCmd("getentid", AimGetEntId, ADMFLAG_ROOT);
 	RegAdminCmd("lightlevel", lightLevel, ADMFLAG_ROOT);
 	RegAdminCmd("fog", valveFog, ADMFLAG_ROOT);
 	RegAdminCmd("lightsoff", lightSwitch, ADMFLAG_ROOT);
@@ -6639,6 +6638,8 @@ public Action Timer_CheckIfBotsStuck(Handle timer, any userid){
 			}
 		}
 	}
+
+	return Plugin_Handled;
 }
 
 //=====================================================
@@ -6703,6 +6704,8 @@ public Action Event_DecoyStarted(Event event, const char[] name, bool dontBroadc
 		//AcceptEntityInput(entity, "Kill");
 		RemoveEntity(entity);
 	}
+
+	return Plugin_Handled;
 }
 
 public void EventsOnInit(){
@@ -6976,6 +6979,8 @@ public Action EventBlockBroadCast(Event gEventHook, const char[] gEventName, boo
 	if (!dontBroadcast) {
 		SetEventBroadcast(gEventHook, true);
 	}
+
+	return Plugin_Handled;
 }
 
 // Event pre player spawn
@@ -7216,6 +7221,8 @@ public Action JumpBoostOnClientJump(Event hEvent, char[] sName, bool dontBroadca
 	// Creates a single use next frame hook
 	if (ZPlayer(client).bCanLeap)
 		_call.JumpBoostOnClientJumpPost(client);
+
+	return Plugin_Handled;
 }
 
 // On player connected full
@@ -7963,10 +7970,6 @@ public Action AimHumanize(int client, int args){
 
 }
 
-public Action AimGetEntId(int client, int args){
-	
-}
-
 public Action AimRemoveLasermines(int client, int args){
 	ZPlayer player = ZPlayer(client);
 	
@@ -8431,6 +8434,8 @@ public Action staffbanchatvoice(int client, int args){
 public Action Command_Map(int client, int args){
 	
 	OnMapEnd();
+
+	return Plugin_Handled;
 }
 
 // Poison throw
@@ -8571,6 +8576,8 @@ public Action Killpoison(Handle timer, any poison){
 		if (StrEqual(classname, "env_steam", false))
 			AcceptEntityInput(poison, "kill");
 	}
+
+	return Plugin_Handled;
 }
 public Action Timer_PoisonDamage(Handle timer, any hPack){
 	

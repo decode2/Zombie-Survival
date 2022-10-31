@@ -1682,8 +1682,8 @@ stock void UTIL_CreateClientHint(int client, char[] sMessage){
 	// Create message
 	Protobuf hMessage = view_as<Protobuf>(StartMessageOne("HintText", client));
 
-    // Validate message
-    if (hMessage != null){
+	// Validate message
+	if (hMessage != null){
 	
 		// Write shake information to message handle
 		hMessage.SetString("text", sMessage);
@@ -1820,7 +1820,7 @@ stock void UTIL_RemoveEntity(int entity, float flDelayTime)
  *
  * @return                  The decal index.
  **/
-stock void UTIL_PrecacheDecal(char[] sDecal)
+stock int UTIL_PrecacheDecal(char[] sDecal)
 {
     // Precache main decal
     int iDecal = PrecacheDecal(sDecal, true);
@@ -2296,7 +2296,7 @@ stock void GetParticleEffectName(int iIndex, char[] sEffect, int iMaxLen)
  *
  * @return                  The table size.    
  **/
-stock void GetEffectNameCount(/*void*/)
+stock int GetEffectNameCount(/*void*/)
 {
     // Initialize the table index
     static int table = INVALID_STRING_TABLE;

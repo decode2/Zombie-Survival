@@ -43,8 +43,8 @@ bool 	gInPassword[MAXPLAYERS+1];
 bool 	gInCreatingCharacter[MAXPLAYERS+1];
 bool 	gInGame[MAXPLAYERS+1];
 bool 	gCanChangeName[MAXPLAYERS+1];
-bool 	gHasMail[MAXPLAYERS+1] = false;
-bool 	gHasPassword[MAXPLAYERS+1] = false;
+bool 	gHasMail[MAXPLAYERS+1] = {false, ...};
+bool 	gHasPassword[MAXPLAYERS+1] = {false, ...};
 
 methodmap Player{
 	public Player(int value){
@@ -165,9 +165,9 @@ methodmap Player{
 		}
 	}
 	property bool bAdmin{
-		public get() {return gAdmin[this];}
+		public get() {return gAdmin[this.id];}
 		public set(bool value){
-			gAdmin[this] = value;
+			gAdmin[this.id] = value;
 		}
 	}
 	property bool bStaff{

@@ -3295,6 +3295,7 @@ stock int GetValidPlayingHumans(bool alive = true){
 	}
 	return iPlaying;
 }
+
 stock int GetValidPlayingZombies(bool alive = true){
 	
 	int iPlaying;
@@ -3303,7 +3304,7 @@ stock int GetValidPlayingZombies(bool alive = true){
 	for (int i = 1; i <= MaxClients; i++){
 		player = ZPlayer(i);
 		
-		if (!IsPlayerExist(player.id, alive) || !player.bZombie)
+		if (!IsPlayerExist(player.id, alive) || !player.isType(PT_ZOMBIE))
 			continue;
 		
 		iPlaying++;

@@ -801,6 +801,8 @@ stock bool ConfigOpenConfigFile(int iConfig, Handle &hConfig)
  * @param iMaxLen           (Optional) The maxlength of the retrieved value.
  * @return                  True if the change was made successfully, false otherwise. 
  **/
+
+/*
 stock bool ConfigKeyvalueTreeSetting(int iConfig, ConfigKvAction mAction = KvAction_Create, char[][] sKeys, int keysMax, char[] sSetting = "", char[] sValue = "", int iMaxLen = 0)
 {
 	// Gets config file structure
@@ -827,7 +829,7 @@ stock bool ConfigKeyvalueTreeSetting(int iConfig, ConfigKvAction mAction = KvAct
 	
 	// i = keys index.
 	// Traverse into the keygroup, stop if it fails
-	for (int i = 0; i < keysMax; v++)
+	for (int i = 0; i < keysMax; i++)
 	{
 		// If key is empty, then break the loop
 		if (!hasLength(sKeys[i]))
@@ -882,7 +884,7 @@ stock bool ConfigKeyvalueTreeSetting(int iConfig, ConfigKvAction mAction = KvAct
 	
 	// We successfully set or got the value
 	return true;
-}
+}*/
 
 /**
  * @brief Destroy all array handles within an array, and clear main array.
