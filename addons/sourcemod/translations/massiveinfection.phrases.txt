@@ -1850,8 +1850,8 @@
 	// REGISTER MENU
 	"Register menu title"
 	{
-		"en"	"Your data will be saved\nZombie Survival by PIU-GAMES & MOOD GAMING"
-		"es"	"Guardado de datos automático para tus avances\nZombie Survival by PIU-GAMES & MOOD GAMING"
+		"en"	"Your data will be saved\nZombie Survival by PIU-GAMES"
+		"es"	"Guardado de datos automático para tus avances\nZombie Survival by PIU-GAMES"
 	}
 
 	"Register menu option 1"
