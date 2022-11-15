@@ -323,7 +323,7 @@ methodmap ZGrenadePack{
 //=====================================================
 //					GRENADES CREATION
 //=====================================================
-stock int CreateGrenadePack(int level, int reset, int types[GRENADE_SLOTS], int counts[GRENADE_SLOTS]){
+stock int CreateGrenadePack(int level, int reset, GrenadeType types[GRENADE_SLOTS], int counts[GRENADE_SLOTS]){
 	ZGrenadePack pack = ZGrenadePack(gGrenadePackLevel.Length);
 	gGrenadePackLevel.Push(level);
 	gGrenadePackReset.Push(reset);

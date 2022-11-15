@@ -111,10 +111,10 @@ stock bool Entity_SetGlobalName(int entity, const char[] name, any ...){
 public Action Party_Timer_CreateMemberDecal(Handle timer, any client){
 	
 	if (!IsPlayerExist(client))
-		return;
+		return Plugin_Continue;
 	
 	if (!gClientData[client].bInParty)
-		return;
+		return Plugin_Continue;
 	
 	gPartyDecalEntity[client] = SpawnDecalAbovePlayer(client, "materials/overlays/friends2.vmt");
 	
@@ -126,6 +126,8 @@ public Action Party_Timer_CreateMemberDecal(Handle timer, any client){
 		
 		SDKHook(gPartyDecalEntity[client], SDKHook_SetTransmit, ShowFriendOverlay);
 	}
+
+	return Plugin_Continue;
 }
 
 public Action ShowFriendOverlay(int ent, int client){

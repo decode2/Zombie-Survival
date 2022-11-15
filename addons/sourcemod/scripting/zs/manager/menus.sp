@@ -303,7 +303,7 @@ public int MainMenuHandler(Menu menu, MenuAction action, int client, int selecti
 		}
 		
 		case MenuAction_Select:{
-			switch(selection){
+			switch(view_as<MenuIndex>(selection)){
 				case MENUINDEX_WEAPONS: showMenuWeaponsMenu(client, 0);
 				case MENUINDEX_ITEMS: showMenuItemsExtra(client);
 				case MENUINDEX_CLASSES: showMenuClasses(client, 0);
@@ -676,7 +676,7 @@ public void buyExtraItem(int client, int selection){
 		return;
 	
 	
-	switch(selection){
+	switch(view_as<ExtraItems>(selection)){
 		case EXTRA_ITEM_ANTIDOTE:{
 			if (!player.isType(PT_ZOMBIE)){
 				TranslationPrintToChat(player.id, "Not zombie");
@@ -829,7 +829,7 @@ void applyExtraItemEffect(int client, int itemId){
 	
 	ZPlayer player = ZPlayer(client);
 	
-	switch (itemId){
+	switch (view_as<ExtraItems>(itemId)){
 		case EXTRA_ITEM_ANTIDOTE:{
 			
 			if (!player.isType(PT_ZOMBIE) || (fnGetZombies() <= 1) || !IsPlayerAlive(player.id)){
@@ -1975,7 +1975,7 @@ public int MejorasHMenuHandler(Menu menu, MenuAction action, int client, int sel
 		}
 		
 		case MenuAction_Select:{
-			switch(selection){
+			switch(view_as<HMEJORAS>(selection)){
 				case H_DAMAGE: {
 					if(p.iHPoints >= (p.iHDamageLevel+1)*HUMAN_DAMAGE_COST && p.iHDamageLevel < MAX_HUMAN_DAMAGE_LEVEL){
 						p.iHPoints -= (p.iHDamageLevel+1)*HUMAN_DAMAGE_COST;
@@ -2101,7 +2101,7 @@ public int MejorasZMenuHandler(Menu menu, MenuAction action, int client, int sel
 		}
 		
 		case MenuAction_Select:{
-			switch(selection){
+			switch(view_as<ZMEJORAS>(selection)){
 				case Z_HEALTH: {
 					if(p.iZPoints >= (p.iZHealthLevel+1)*ZOMBIE_HEALTH_COST && p.iZHealthLevel < MAX_ZOMBIE_HEALTH_LEVEL){
 						p.iZPoints -= (p.iZHealthLevel+1)*ZOMBIE_HEALTH_COST;

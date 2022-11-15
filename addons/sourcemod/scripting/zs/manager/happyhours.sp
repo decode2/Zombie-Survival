@@ -83,6 +83,8 @@ public Action happyHour(int client, int args){
 		FormatEx(buffer, sizeof(buffer), "Common hours time");
 	
 	(client != 0) ? TranslationPrintToChat(client, buffer) : TranslationPrintToChatAll(buffer);
+
+	return Plugin_Handled;
 }
 
 void HappyHoursOnPostRoundStart(){

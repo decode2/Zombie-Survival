@@ -362,6 +362,8 @@ public Action GameModesOnPanel(Event hEvent, char[] sName, bool dontBroadcast){
 		// Disable broadcasting
 		hEvent.BroadcastDisabled = true;
 	}
+
+	return Plugin_Handled;
 }
 
 /**
@@ -408,6 +410,8 @@ public Action GameModesOnStartPre(Event hEvent, char[] sName, bool dontBroadcast
 		/*delete gServerData.EndTimer;
 		delete gServerData.BlastTimer;*/
 	}
+
+	return Plugin_Continue;
 }
 
 //=====================================================
@@ -417,6 +421,8 @@ public Action TVirusReleasedTimer(Handle timer){
 	
 	// Send t-virus message
 	TranslationPrintHudTextAll(gServerData.GameSync, -1.0, ANNOUNCER_HUD_Y_POSITION, 3.0, 0, 45, 255, 255, 1, 1.0, 1.0, 1.0, "T Virus has been released");
+
+	return Plugin_Handled;
 }
 
 public Action CounterOnGameModesStartPre(Handle timer){
@@ -472,6 +478,8 @@ public Action GameModesOnStart(Event hEvent, char[] sName, bool dontBroadcast){
 	
 	// Forward event to modules
 	//SoundsOnRoundStart();
+
+	return Plugin_Handled;
 }
 
 /*

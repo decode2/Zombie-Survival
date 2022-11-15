@@ -410,6 +410,8 @@ stock int CreateNetworkedWeaponEnt(int client, int weaponArrayID){
 	
 	weapon.SetNetworkedName(iEntWeapon);
 	TeleportEntity(iEntWeapon, vecPos, NULL_VECTOR, NULL_VECTOR);
+
+	return iEntWeapon;
 }
 void ZWeapons_OnMapStart(){
 	

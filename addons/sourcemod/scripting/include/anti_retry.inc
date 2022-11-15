@@ -94,22 +94,22 @@ public Retry_Actions GetRetryAction(int client){
 
 public void CheckIfRetry(int client){
 	
-	CreateTimer(1.0,RetryActionTimerHandler, client);
+	CreateTimer(1.0, RetryActionTimerHandler, client);
 }
 
 public Action RetryActionTimerHandler(Handle timer, any client){
 	
 	if (!IsPlayerExist(client))
-		return;
+		return Plugin_Continue;
 	
 	if (IsFakeClient(client))
-		return;
+		return Plugin_Continue;
 	
 	int steamid = GetSteamAccountID(client);
 	int historicId = gHistoricSteamIds.FindValue(steamid);
 	
 	if (historicId <= -1)
-		return;
+		return Plugin_Continue;
 	
 	switch(GetRetryAction(client)){
 		case RETRY_RESTRICT:{
@@ -120,6 +120,8 @@ public Action RetryActionTimerHandler(Handle timer, any client){
 			gHistoricsCount.Set(historicId, -1);
 		}
 	}
+
+	return Plugin_Handled;
 }
 
 public void debugRetry(){

@@ -34,8 +34,7 @@ void RagdollOnClientDeath(int client){
 	int ragdoll = RagdollGetClientRagdoll(client);
 	
 	// If the ragdoll is invalid, then stop.
-	if (ragdoll == -1)
-	{
+	if (ragdoll == -1){
 		return;
 	}
 	
@@ -43,8 +42,7 @@ void RagdollOnClientDeath(int client){
 	float dissolvedelay = VEFFECTS_DISSOLVE_DELAY;
 	
 	// If the delay is 0 or less, then remove right now.
-	if (dissolvedelay <= 0)
-	{
+	if (dissolvedelay <= 0){
 		RagdollTimer(INVALID_HANDLE, ragdoll);
 		return;
 	}
@@ -93,21 +91,21 @@ void RagdollRemove(int ragdoll){
 }
 public Action RagdollTimer(Handle timer, any ragdoll){
 	// If the ragdoll is already gone, then stop.
-	if (!IsValidEdict(ragdoll))
-	{
-		return;
+	if (!IsValidEdict(ragdoll)){
+		return Plugin_Continue;
 	}
 	
 	// Make sure this edict is still a ragdoll and not become a new valid entity.
 	char classname[64];
 	GetEdictClassname(ragdoll, classname, sizeof(classname));
-	if (!StrEqual(classname, "cs_ragdoll"))
-	{
-		return;
+	if (!StrEqual(classname, "cs_ragdoll")){
+		return Plugin_Continue;
 	}
 	
 	// Remove the ragdoll.
 	RagdollRemove(ragdoll);
+
+	return Plugin_Handled;
 }
 stock int RagdollGetClientRagdoll(int client){
 	return GetEntDataEnt2(client, g_iToolsRagdoll);

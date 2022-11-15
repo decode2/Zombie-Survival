@@ -288,7 +288,7 @@ stock void ScreenFadeAll(float duration, float holdtime, int flag = FFADE_IN, in
 		}
 	}
 }
-stock bool ScreenFade(int client, float duration, float holdtime, int flag = FFADE_IN, int colors[4] = {255, 255, 255, 255}){
+stock void ScreenFade(int client, float duration, float holdtime, int flag = FFADE_IN, int colors[4] = {255, 255, 255, 255}){
 	// Create message
 	Handle hFade = StartMessageOne("Fade", client);
 
@@ -714,6 +714,8 @@ public Action ReHat(Handle hTimer, int client){
 			}
 		}
 	}
+
+	return Plugin_Handled;
 }
 
 //=====================================================
@@ -814,6 +816,8 @@ public Action SendHudAnnouncementAll(Handle hTimer, any data){
 	if (data){
 		FinishArmageddonIntro();
 	}
+
+	return Plugin_Handled;
 }
 stock void SendModeAnnouncement(int client, int value){
 	
@@ -1089,6 +1093,8 @@ public Action FinishWarmup(int client, int args){
 		bWarmupEnded = true;
 		CS_TerminateRound(0.1, CSRoundEnd_GameStart);
 	}
+
+	return Plugin_Handled;
 }
 void WarmUpRespawnPlayer(int client){
 	
@@ -1221,6 +1227,8 @@ public Action DeleteEntity(Handle timer, any entref){
 		//AcceptEntityInput(entity, "kill");
 		RemoveEntity(entity);
 	}
+
+	return Plugin_Continue;
 }
 public bool FilterTarget(int entity, int contentsMask, any data){
 	return (data == entity);
@@ -1867,7 +1875,7 @@ public Action AuraTimer(Handle hTimer, any data){
 	int entity = EntRefToEntIndex(data);
 	
 	if (!IsValidEntity(entity))
-		return;
+		return Plugin_Continue;
 	
 	int index = AuraShields.FindValue(data);
 	
@@ -1877,6 +1885,7 @@ public Action AuraTimer(Handle hTimer, any data){
 	//AcceptEntityInput(entity, "Kill");
 	RemoveEntity(entity);
 
+	return Plugin_Continue;
 }
 
 //=====================================================
@@ -2063,7 +2072,7 @@ public Action DecoyTouchPost(int entity, int other){
 	if(other == 0 || IsEntityLasermine(other)){
 	
 		if(!IsValidEntity(entity))
-			return;
+			return Plugin_Continue;
 			
 		int owner = GetEntPropEnt(entity, Prop_Data, "m_hOwnerEntity");
 		
@@ -2102,6 +2111,8 @@ public Action DecoyTouchPost(int entity, int other){
 		delete traceX;
 		delete traceY;
 	}
+
+	return Plugin_Handled;
 }
 public void DecoyFrameCallback(any entity){
 	
@@ -2124,6 +2135,8 @@ public void DecoyFrameCallback(any entity){
 public Action DecoyTimer(Handle timer, any ref){
 	int ent = EntRefToEntIndex(ref);
 	BlackHoleSpawnEffect(ent);
+
+	return Plugin_Handled;
 }
 void BlackHoleSpawnEffect(int entity){
 	
@@ -2302,6 +2315,8 @@ public Action Event_EntitySmoke(Event hEvent, char[] sName, bool dontBroadcast){
 		int client = owner.id;
 		CreateAuraShield(client, vPosition);
 	}
+
+	return Plugin_Handled;
 	
 	//int iReference = EntIndexToEntRef(entity);
 	

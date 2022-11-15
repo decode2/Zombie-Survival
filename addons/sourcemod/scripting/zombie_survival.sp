@@ -1075,7 +1075,7 @@ void RoundEndOnClientDisconnect(){
 		
 		ZPlayer player = ZPlayer(humanId);
 		
-		switch(ActualMode.id){
+		switch(view_as<GameModes>(ActualMode.id)){
 			case MODE_ANIHHILATION, MODE_INFECTION, MODE_MULTIPLE_INFECTION, MODE_MULTIPLE_NEMESIS:{
 				
 				player.Zombiefy(true);
@@ -1113,7 +1113,7 @@ void RoundEndOnClientDisconnect(){
 		
 		ZPlayer player = ZPlayer(zombieId);
 		
-		switch(ActualMode.id){
+		switch(view_as<GameModes>(ActualMode.id)){
 			case MODE_SURVIVOR:{
 				
 				player.TurnInto(PT_SURVIVOR, true);
@@ -2591,6 +2591,8 @@ public Action infoDiscord(int client, int args){
 	
 	PrintToConsole(client, "[PIU] Discord ZOMBIE SURVIVAL & MULTIMOD: %s", DISCORD_LINK_PIU);
 	PrintToConsole(client, "[PIU] TE ESPERAMOS!");
+
+	return Plugin_Handled;
 }
 
 public Action infoWhatsapp(int client, int args){
@@ -2601,6 +2603,8 @@ public Action infoWhatsapp(int client, int args){
 	
 	PrintToConsole(client, "[PIU] Whatsapp ZOMBIE SURVIVAL: %s", WHATSAPP_LINK_PIU);
 	PrintToConsole(client, "[PIU] TE ESPERAMOS!");
+
+	return Plugin_Handled;
 }
 
 public Action infoInstagram(int client, int args){
@@ -2611,6 +2615,8 @@ public Action infoInstagram(int client, int args){
 	
 	PrintToConsole(client, "[PIU] Instagram ZOMBIE SURVIVAL: %s", INSTAGRAM_LINK_PIU);
 	PrintToConsole(client, "[PIU] TE ESPERAMOS!");
+
+	return Plugin_Handled;
 }
 
 public Action showAdminList(int client, int args){
@@ -2635,6 +2641,8 @@ public Action showAdminList(int client, int args){
 	ImplodeStrings(AdminNames, count, ", ", buffer, sizeof(buffer));
 	
 	PrintToChat(client, " \x0B%s\x01 Admins online:\n %s", TRANSLATION_PHRASE_PREFIX, buffer);
+
+	return Plugin_Handled;
 }
 public Action nightVision(int client, int args){
 	
@@ -3344,26 +3352,36 @@ public Action muteHurtSounds(int client, any args){
 	ZPlayer player = ZPlayer(client);
 	player.bHearHurtSounds = !player.bHearHurtSounds;
 	TranslationPrintToChat(player.id, player.bHearHurtSounds ? "Silence hurt sounds disabled" : "Silence hurt sounds enabled");
+
+	return Plugin_Handled;
 }
 public Action muteBullets(int client, any args){
 	ZPlayer player = ZPlayer(client);
 	player.bStopSound = !player.bStopSound;
 	TranslationPrintToChat(player.id, player.bStopSound ? "Silence shots enabled" : "Silence shots disabled");
+
+	return Plugin_Handled;
 }
 public Action autopBuy(int client){
 	ZPlayer player = ZPlayer(client);
 	player.bAutoWeaponUpgrade = !player.bAutoWeaponUpgrade;
 	TranslationPrintToChat(player.id, player.bAutoWeaponUpgrade ? "Weapon auto upgrade enabled" : "Weapon auto upgrade disabled");
+
+	return Plugin_Handled;
 }
 public Action autogBuy(int client){
 	ZPlayer player = ZPlayer(client);
 	player.bAutoGrenadeUpgrade = !player.bAutoGrenadeUpgrade;
 	TranslationPrintToChat(player.id, player.bAutoGrenadeUpgrade ? "Grenade pack auto upgrade enabled" : "Grenade pack auto upgrade disabled");
+
+	return Plugin_Handled;
 }
 public Action autozClass(int client){
 	ZPlayer player = ZPlayer(client);
 	player.bAutoZClass = !player.bAutoZClass;
 	TranslationPrintToChat(player.id, player.bAutoZClass ? "Zombie class auto upgrade enabled" : "Zombie class auto upgrade disabled");
+
+	return Plugin_Handled;
 }
 public Action NormalSoundHook(int clients[64], int &numClients, char sample[PLATFORM_MAX_PATH], int &entity, int &channel, float &volume, int &level, int &pitch, int &flags){
 	
@@ -3568,7 +3586,7 @@ void StartMode(int mode, int client = 0, bool bypass = false){
 	mapFogEnd = 1800.0;
 	mapFogDensity = 0.90;
 	
-	switch(mode){
+	switch(view_as<GameModes>(mode)){
 		case MODE_WARMUP:{
 			StartWarmup();
 		}
@@ -3603,7 +3621,7 @@ void StartMode(int mode, int client = 0, bool bypass = false){
 			ZPlayer zombie = ZPlayer(IsPlayerExist(client) ? client : GetRandomUser(PT_HUMAN));
 			
 			if (view_as<int>(zombie) < 1)
-			return;
+				return;
 			
 			zombie.Zombiefy(true);
 			
@@ -4270,6 +4288,8 @@ public void ModeStats_StartDetection(){
 public Action Timer_StartShowingModeStats(Handle hTimer, any data){
 	
 	hModeStats = CreateTimer(2.0, Timer_ShowModeStats, _, TIMER_FLAG_NO_MAPCHANGE|TIMER_REPEAT);
+
+	return Plugin_Continue;
 }
 public Action Timer_ShowModeStats(Handle hTimer, any data){
 	
@@ -4487,12 +4507,16 @@ public Action WeaponsOnCanUse(int client, int weaponIndex){
 }
 public Action PreThink(int client){
 	SetEntPropFloat(client, Prop_Send, "m_flStamina", 0.0);
+
+	return Plugin_Continue;
 }
 
 public Action WeaponsOnDropPost(int clientIndex, int weaponIndex){
 	if(IsValidEntity(weaponIndex)) {
 		CreateTimer(TIME_TO_REMOVE_WEAPONS, WeaponsRemoveDropedWeapon, EntIndexToEntRef(weaponIndex), TIMER_FLAG_NO_MAPCHANGE);
 	}
+
+	return Plugin_Continue;
 }
 public Action WeaponsRemoveDropedWeapon(Handle hTimer, any weaponIndex){
 	
@@ -4959,18 +4983,21 @@ public Action TimerSpawnChest(Handle timer, int client){
 }
 public Action DeleteChest(Handle timer, int ref){
 	if (ref == INVALID_ENT_REFERENCE)
-	return;
+		return Plugin_Handled;
 	
 	int entity = EntRefToEntIndex(ref);
 	
 	if (!IsValidEntity(entity))
-	return;
+		return Plugin_Handled;
 	
 	static char sClassname[32];
 	GetEntityClassname(entity, sClassname, sizeof(sClassname));
 	
-	if (StrEqual(sClassname, CHEST_CLASSNAME))
-	AcceptEntityInput(entity, "FadeAndKill");
+	if (StrEqual(sClassname, CHEST_CLASSNAME)){
+		AcceptEntityInput(entity, "FadeAndKill");
+	}
+
+	return Plugin_Handled;
 }
 public void HookTouchChest(int entity, int other){
 	if (!IsValidEntity(entity))
@@ -5389,6 +5416,8 @@ void StartSmoothScreenFadeAll(float time){
 }
 public Action ScreenFadeIn(Handle hTimer){
 	ScreenFadeAll(1.0, 1.0+0.4, FFADE_IN|FFADE_PURGE, { 0, 0, 0, 255 });
+
+	return Plugin_Handled;
 }
 
 //=====================================================
@@ -5398,7 +5427,7 @@ public Action testEffects(int client, int args){
 	ZPlayer id = ZPlayer(client);
 	
 	if (!id.bStaff)
-	return Plugin_Handled;
+		return Plugin_Handled;
 	
 	for (int i = 1; i <= MaxClients; i++){
 		if (!IsPlayerExist(i, true))
@@ -5561,18 +5590,18 @@ public Action WeaponsOnAnimationFix(int client){
 	
 	// Validate client
 	if(!IsPlayerExist(player.id)){
-		return;
+		return Plugin_Continue;
 	}
 	
 	if (!player.isZombie())
-		return;
+		return Plugin_Continue;
 	
 	// Convert weapon index to ID
 	CSWeaponID weaponID = WeaponsGetID(GetEntPropEnt(player.id, Prop_Data, "m_hActiveWeapon"));
 	
 	// If weapon isn't valid, then stop
 	if(!CS_IsValidWeaponID(weaponID)){
-		return;
+		return Plugin_Continue;
 	}
 	
 	// Get view index
@@ -5644,6 +5673,8 @@ public Action WeaponsOnAnimationFix(int client){
 		nOldSequence[player.id] = nSequence;
 		flOldCycle[player.id] = flCycle;
 	}
+
+	return Plugin_Handled;
 }
 stock CSWeaponID WeaponsGetID(int weaponIndex){
 	
@@ -6367,6 +6398,8 @@ int grenades = 0;
 /////////////////////////// EXPERIMENTAL
 public Action StartMolotovRain(int client, int args){
 	TimerCallBack(null);
+
+	return Plugin_Handled;
 }
 void GrenadeRain_OnStartMode(){
 	
