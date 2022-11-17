@@ -3555,7 +3555,7 @@ void StartMode(int mode, int client = 0, bool bypass = false){
 			return;
 		}
 		else if (nAlive < modeCheckVar.minUsers){
-			StartMode(view_as<int>(MODE_INFECTION));
+			StartMode(view_as<int>(MODE_INFECTION), _, true);
 			return;
 		}
 	}
