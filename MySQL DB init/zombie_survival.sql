@@ -221,7 +221,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `vencido` tinyint(4) DEFAULT '0',
   `boost` int(11) DEFAULT '1',
   `diasAFavor` int(11) DEFAULT '0',
-  `tag` int(11) DEFAULT '7',
+  `tag` int(11) DEFAULT '0',
   PRIMARY KEY (`charId`,`fechaVencimiento`),
   KEY `fk_Admin_Characters1_idx` (`charId`),
   KEY `fk_Admin_Tag_idx` (`tag`)
