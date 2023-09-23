@@ -647,7 +647,7 @@ char arrayUniqueCode[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12
 stock void GenerateUniqueCode(char[] sOutput, int size){
 	
 	for(int i = 0; i < size; i++){
-		sOutput[i] = arrayUniqueCode[GetRandomInt(0, sizeof(arrayUniqueCode))];
+		sOutput[i] = arrayUniqueCode[GetRandomInt(0, sizeof(arrayUniqueCode)-1)];
 	}
 	
 	sOutput[size-1] = EOS;
