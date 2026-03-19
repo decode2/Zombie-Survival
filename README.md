@@ -1,40 +1,53 @@
-# Zombie Survival
- 
-This is a custom-made CSGO gamemode that i've created with a friend, we really loved CS 1.6 zombie plague so we tried to make it on CSGO too.
+# Zombie Survival 🧟
 
-This plugin contains lots of features, i don't remember them all, but some of them are:
+This is a custom-made CS:GO gamemode created to bring back the essence of the classic **CS 1.6 Zombie Plague**. This project was developed as a passion project to adapt those beloved mechanics into the CS:GO engine.
 
-- MySQL account system with character creation (STEAM ID associated)
-- All of common zombie plague content (humans vs zombies and custom modes)
-- Levels & resets system
-- Weapons by levels & resets
-- Custom weapons (models, damage, name, effects, etc)
-- Zombie & Human classes
-- Some custom weapons like bazooka and chainsaw (thanks qubka!)
-- Custom rounds
-- Black hole & aura shield (took some code from void grenade from alliedmods)
-- Fire/freeze/light grenades
-- Leap jump
-- Perks upgradeable with zombie/human points
+Since we have no time left to continue its development, the project is now **free to use** as a base for your own servers (recognition is the only thing we ask in exchange!).
 
-And so on..
+---
 
-By now, you should have already remembered how it was back in CS 1.6, so, now it's free to use, since i can't make it better because we have no time left.
+## 🚀 Features
 
-I would really like to thank:
-- CODES: my friend that motivated & helped me to make this (we know it could be better, but we had to learn and practise)
-- PIU GAMES COMMUNITY: My community, they helped me a lot creating maps, models and so on, so we could reach a nice server.
-- Alliedmods community: Took a lot of code from them, qubka e.g. (he created and posted the zombie plague for CSGO) did a lot that we took from his code and adapted to ours.
-- Everyone that sees some part of code that is really similar to what he/she has posted on AlliedModders.
+This plugin is packed with features designed to emulate the classic experience. While there are too many to list them all, the main highlights include:
 
-THERE IS A LOT OF CODE THAT I COULDN'T IMPLEMENT CORRECTLY, SO, YOU MIGHT HAVE TO CHECK BY YOURSELF IF YOU WANT TO DELETE IT.
+* **MySQL Account System:** Character creation associated with SteamID.
+* **Classic Zombie Plague Content:** Full Humans vs. Zombies experience including custom modes.
+* **Progression System:** Levels and Resets system to keep players engaged.
+* **Dynamic Arsenal:** Weapons unlocked by levels/resets, featuring custom models, damage, names, and special effects.
+* **Class System:** Various Zombie and Human classes to choose from.
+* **Special Weaponry:** Includes unique items like the **Bazooka** and **Chainsaw** (Credits to *qubka*).
+* **Custom Rounds:** Variety of round types to change gameplay flow.
+* **Advanced Equipment:** Black Hole and Aura Shield (adapted from AlliedModders' void grenade).
+* **Tactical Grenades:** Fire, Freeze, and Light grenades.
+* **Enhanced Mobility:** Leap jump mechanics.
+* **Perk System:** Upgradeable attributes using Zombie/Human points.
 
-From now on, i will start uploading files so you can use them and make your own server using this as a base.
+---
 
-Resources: https://drive.google.com/file/d/1pLtCYBmV-5b474JQmF-PV52hG6QWGv6i/view?usp=sharing
+## 👥 Credits & Contributors
 
-Maps my community made: https://drive.google.com/file/d/1szC49VXfwDPMumN9dMjE5yvhwVS9dlej/view?usp=sharing
+A huge thanks to everyone who contributed to making this project a reality:
 
-MySQL initialization script for the DataBase is on the project directory.
+| Role | Contributor |
+| :--- | :--- |
+| **Publisher & Dev** | **Deco** |
+| **Development** | **Codes** |
+| **Modelling Team** | **Ventoz** & Modelling Team |
+| **Mapping Team** | **CrimeLife** & Mapping Team |
 
-Alliedmods post: https://forums.alliedmods.net/showthread.php?p=2769407#post2769407 -> READ HERE FOR INSTRUCTIONS!
+### Special Recognitions
+* **Piu Games Community:** For their immense help creating maps and models to reach a high-quality server environment.
+* **AlliedModders Community:** Specifically **qubka**, who posted the original Zombie Plague for CS:GO. We adapted and learned a lot from his work.
+* **Independent Developers:** To everyone on AlliedModders whose code snippets helped us build this logic.
+
+---
+
+## ⚠️ Important Information
+
+> **Note on Code Quality:** There is a significant amount of code that wasn't implemented perfectly. We recommend reviewing the source files to optimize or delete parts according to your needs.
+
+* **Resources (Maps included):** [Download here](https://drive.google.com/file/d/1pLtCYBmV-5b474JQmF-PV52hG6QWGv6i/view?usp=sharing)
+* **Database:** The MySQL initialization script is located in the project directory.
+* **Instructions:** For detailed setup and usage, please read the [AlliedModders Official Post](https://forums.alliedmods.net/showthread.php?p=2769407#post2769407).
+
+Thank you to the community for the years of support and motivation!
