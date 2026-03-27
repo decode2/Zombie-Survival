@@ -150,7 +150,7 @@ stock void ShakeClientScreen(int client, float amplitude, float frequency, float
 	Handle hShake = StartMessageOne("Shake", client);
 	
 	// Validate.
-	if (hShake == INVALID_HANDLE){
+	if (hShake == null){
 		return;
 	}
 	
@@ -293,7 +293,7 @@ stock void ScreenFade(int client, float duration, float holdtime, int flag = FFA
 	Handle hFade = StartMessageOne("Fade", client);
 
 	// Validate message
-	if(hFade != INVALID_HANDLE)
+	if(hFade != null)
 	{
 		// Write shake information to message handle
 		PbSetInt(hFade, "duration", RoundToNearest(duration * 1000.0)); 
@@ -803,7 +803,7 @@ void StartArmageddonIntro(){
 	StartSmoothScreenFadeAll(fTime);
 	
 	// Send HUD announcement
-	SendHudAnnouncementAll(INVALID_HANDLE, 0);
+	SendHudAnnouncementAll(null, 0);
 	
 	// Create a timer to remove the effects and start the mode
 	CreateTimer(fTime*2.5, SendHudAnnouncementAll, 1);
@@ -1392,9 +1392,9 @@ bool Freeze(int client, int attacker, float time){
 	
 	if (player.bInvulnerable) return false;
 	
-	if (player.hFreezeTimer != INVALID_HANDLE){
-		KillTimer(player.hFreezeTimer);
-		player.hFreezeTimer = INVALID_HANDLE;
+	if (player.hFreezeTimer != null){
+		delete player.hFreezeTimer;
+		player.hFreezeTimer = null;
 	}
 	
 	SetEntityMoveType(client, MOVETYPE_NONE);
@@ -1420,13 +1420,13 @@ public Action Unfreeze(Handle timer, any client){
 	ZPlayer player = ZPlayer(client);
 	
 	if (!IsPlayerExist(player.id, true)){
-		player.hFreezeTimer = INVALID_HANDLE;
+		player.hFreezeTimer = null;
 		return Plugin_Stop;
 	}
 	
-	if (player.hFreezeTimer != INVALID_HANDLE){
+	if (player.hFreezeTimer != null){
 		SetEntityMoveType(client, MOVETYPE_WALK);
-		player.hFreezeTimer = INVALID_HANDLE;
+		player.hFreezeTimer = null;
 		player.setGravity();
 		
 		player.removeGlow();
@@ -1674,53 +1674,57 @@ public Action CustomEventGrenadeDetonate(Handle timer, any data){
 public Action CreateAuraShield(int client, float coords[3]){
 	int entity = CreateEntityByName("prop_dynamic_glow");
 	
-	if (IsValidEntity(entity)){
-		// Move entity to origins
-		TeleportEntity(entity, coords, NULL_VECTOR, NULL_VECTOR);
-		
-		DispatchKeyValue(entity, "Classname", AURA_CLASSNAME);
-		DispatchKeyValue(entity, "model", AURA_WORLDMODEL);
-		DispatchKeyValue(entity, "Solid", "6");
-		DispatchKeyValue(entity, "SetGlowEnabled", "1");
-		
-		// SOLID TEST
-		//DispatchKeyValue(entity, "Collisions", "1");
-		
-		SetEntProp(entity, Prop_Send, "m_usSolidFlags", 12); // FSOLID_NOT_SOLID|FSOLID_TRIGGER 
-		SetEntProp(entity, Prop_Data, "m_nSolidType", 6); // SOLID_VPHYSICS 
-		SetEntProp(entity, Prop_Send, "m_CollisionGroup", 5); // COLLISION_GROUP_DEBRIS
-		
-		// GLOW THIS SH*T
-		SetEntProp(entity, Prop_Send, "m_bShouldGlow", true, true);
-		SetEntProp(entity, Prop_Send, "m_nGlowStyle", 1); 
-		SetEntPropFloat(entity, Prop_Send, "m_flModelScale", 1.2);
-		SetEntPropFloat(entity, Prop_Send, "m_flGlowMaxDist", 100000000.0);
-		
-		int iColors[4];
-		
-		iColors[0] = GetRandomInt(35, 255);
-		iColors[1] = GetRandomInt(35, 255);
-		iColors[2] = GetRandomInt(35, 255);
-		iColors[3] = 255;
-		
-		SetVariantColor(iColors);
-		AcceptEntityInput(entity, "SetGlowColor");
-		
-		SetEntityRenderMode(entity, RENDER_TRANSCOLOR);
-		SetEntityRenderColor(entity, 255, 255, 255, 110);
-		
-		DispatchSpawn(entity);
-		ActivateEntity(entity);
-		
-		// Send data to the next frame
-		DataPack hPack = new DataPack();
-		hPack.WriteCell(entity);
-		hPack.WriteCell(client);
-		
-		RequestFrame(FrameCallback, hPack);
-		
-		//SDKHook(entity, SDKHook_Touch, AuraOnStartTouch);
-	}
+	if (!IsValidEntity(entity)) return Plugin_Handled;
+
+	DispatchKeyValue(entity, "Classname", AURA_CLASSNAME);
+	DispatchKeyValue(entity, "model", AURA_WORLDMODEL);
+	DispatchKeyValue(entity, "Solid", "6");
+	DispatchKeyValue(entity, "SetGlowEnabled", "1");
+	
+	// 3. DispatchSpawn 
+	DispatchSpawn(entity);
+	
+	// 4. ActivateEntity 
+	ActivateEntity(entity);
+	
+	// Move entity to origins
+	TeleportEntity(entity, coords, NULL_VECTOR, NULL_VECTOR);
+
+	// SOLID TEST
+	//DispatchKeyValue(entity, "Collisions", "1");
+	
+	// 5. SetEntProp (Glow, CollisionGroup, SolidFlags) 
+	SetEntProp(entity, Prop_Send, "m_usSolidFlags", 12); // FSOLID_NOT_SOLID|FSOLID_TRIGGER 
+	SetEntProp(entity, Prop_Data, "m_nSolidType", 6); // SOLID_VPHYSICS 
+	SetEntProp(entity, Prop_Send, "m_CollisionGroup", 5); // COLLISION_GROUP_DEBRIS
+	
+	// GLOW THIS SH*T
+	SetEntProp(entity, Prop_Send, "m_bShouldGlow", true, true);
+	SetEntProp(entity, Prop_Send, "m_nGlowStyle", 1); 
+	SetEntPropFloat(entity, Prop_Send, "m_flModelScale", 1.2);
+	SetEntPropFloat(entity, Prop_Send, "m_flGlowMaxDist", 100000000.0);
+	
+	int iColors[4];
+	
+	iColors[0] = GetRandomInt(35, 255);
+	iColors[1] = GetRandomInt(35, 255);
+	iColors[2] = GetRandomInt(35, 255);
+	iColors[3] = 255;
+	
+	SetVariantColor(iColors);
+	AcceptEntityInput(entity, "SetGlowColor");
+	
+	SetEntityRenderMode(entity, RENDER_TRANSCOLOR);
+	SetEntityRenderColor(entity, 255, 255, 255, 110);
+	
+	// Send data to the next frame
+	DataPack hPack = new DataPack();
+	hPack.WriteCell(entity);
+	hPack.WriteCell(client);
+	
+	RequestFrame(FrameCallback, hPack);
+	
+	//SDKHook(entity, SDKHook_Touch, AuraOnStartTouch);
 	return Plugin_Handled;
 }
 void PushPlayersAwayFromForceField(int client, int iForcefield){
@@ -1748,7 +1752,7 @@ void PushPlayersAwayFromForceField(int client, int iForcefield){
 				player.bLadder = false;
 			}
 			
-			if (player.hFreezeTimer != INVALID_HANDLE)
+			if (player.hFreezeTimer != null)
 				Unfreeze(player.hFreezeTimer, player.id);
 			
 			SetEntPropEnt(client, Prop_Data, "m_hGroundEntity", -1);
@@ -2156,19 +2160,31 @@ void BlackHoleSpawnEffect(int entity){
 		return;
 	
 	int particle = CreateEntityByName("info_particle_system");
-	SetEntPropEnt(particle, Prop_Data, "m_hOwnerEntity", owner);
-	SetEntPropString(particle, Prop_Data, "m_iName", BLACKHOLE_EFFECT_NAME);
-	//AcceptEntityInput(entity, "Kill");
+	
+	if (IsValidEntity(particle)){
+		DispatchKeyValue(particle, "effect_name", BLACKHOLE_EFFECT_NAME);
+		DispatchKeyValue(particle, "start_active", "0");
+		
+		DispatchSpawn(particle);
+		ActivateEntity(particle);
+		TeleportEntity(particle, nadeOrigin, NULL_VECTOR, NULL_VECTOR);
+		
+		SetEntPropEnt(particle, Prop_Data, "m_hOwnerEntity", owner);
+		SetEntPropString(particle, Prop_Data, "m_iName", BLACKHOLE_EFFECT_NAME);
+		
+		AcceptEntityInput(particle, "Start");
+		
+		int ref = EntIndexToEntRef(particle);
+		BlackHoles.Push(ref);
+		volumeIndex = BlackHoles.FindValue(ref);
+	}
+	
+	// Emit sound using particle position or particle entity since decoy is being removed
+	EmitSoundToAll("*/piu/blackhole.mp3", particle, SNDCHAN_ITEM, _, _, BLACKHOLE_VOLUME, _, _, nadeOrigin);
+	
+	// Remove decoy entity
 	RemoveEntity(entity);
 	
-	int ref = EntIndexToEntRef(particle);
-	
-	DispatchKeyValue(particle, "effect_name", BLACKHOLE_EFFECT_NAME);
-
-	BlackHoles.Push(ref);
-	volumeIndex = BlackHoles.FindValue(ref);
-	EmitSoundToAll("*/piu/blackhole.mp3", entity, SNDCHAN_ITEM, _, _, BLACKHOLE_VOLUME, _, _, nadeOrigin);
-	//EmitSoundToAll("piu/blackhole.mp3", SOUND_FROM_PLAYER, SNDCHAN_ITEM,_,_, BLACKHOLE_VOLUME);
 	interval = BLACKHOLE_DURATION;
 	
 	#if BLACKHOLE_INDICATOR > 0
@@ -2177,13 +2193,6 @@ void BlackHoleSpawnEffect(int entity){
 	TE_SetupBeamRingPoint(nadeOrigin, (BLACKHOLE_MIN_DISTANCE + 80.0)*1.4, (BLACKHOLE_MIN_DISTANCE + 81.0)*1.4, GlowSprite, GlowSprite, 0, 60, BLACKHOLE_DURATION, 10.0, 10.0, color, 1, 0);
 	TE_SendToAll();
 	#endif
-	
-	
-	DispatchKeyValue(particle, "start_active", "0");
-	DispatchSpawn(particle);
-	TeleportEntity(particle, nadeOrigin, NULL_VECTOR,NULL_VECTOR);
-	ActivateEntity(particle);
-	AcceptEntityInput(particle, "Start");
 
 	DataPack pack;
 	CreateDataTimer(interval, Timer_Duration, pack);
