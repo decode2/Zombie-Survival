@@ -1,49 +1,56 @@
 "Games"
 {
-	/*
-	 * Alien Swarm: Reactive Drop
-	 * Symbol Server: https://symsrv.reactivedrop.com
-	 */
-	
 	"#default"
 	{
 		"Offsets"
 		{
+			"Blocked"
+			{
+				"windows"	"106"
+			}
 			"EndTouch"
 			{
 				"windows"	"104"
 			}
 			"FireBullets"
 			{
-				"windows"	"117"
+				"windows"	"118"
 			}
 			"GetMaxHealth"
 			{
-				"windows"	"121"
+				"windows"	"122"
 			}
 			"OnTakeDamage"
 			{
-				"windows"	"66"
+				"windows"	"68"
+			}
+			"OnTakeDamage_Alive"
+			{
+				"windows"	"306"
 			}
 			"PreThink"
 			{
-				"windows"	"349"
+				"windows"	"376"
 			}
 			"PostThink"
 			{
-				"windows"	"350"
+				"windows"	"377"
+			}
+			"Reload"
+			{
+				"windows"	"295"
 			}
 			"SetTransmit"
 			{
-				"windows"	"22"
+				"windows"	"23"
 			}
 			"ShouldCollide"
 			{
-				"windows"	"17"
+				"windows"	"18"
 			}
 			"Spawn"
 			{
-				"windows"	"24"
+				"windows"	"25"
 			}
 			"StartTouch"
 			{
@@ -51,7 +58,7 @@
 			}
 			"Think"
 			{
-				"windows"	"50"
+				"windows"	"52"
 			}
 			"Touch"
 			{
@@ -59,7 +66,7 @@
 			}
 			"TraceAttack"
 			{
-				"windows"	"64"
+				"windows"	"66"
 			}
 			"Use"
 			{
@@ -67,27 +74,27 @@
 			}
 			"VPhysicsUpdate"
 			{
-				"windows"	"162"
+				"windows"	"157"
 			}
 			"Weapon_CanSwitchTo"
 			{
-				"windows"	"285"
+				"windows"	"297"
 			}
 			"Weapon_CanUse"
 			{
-				"windows"	"279"
+				"windows"	"291"
 			}
 			"Weapon_Drop"
 			{
-				"windows"	"282"
+				"windows"	"294"
 			}
 			"Weapon_Equip"
 			{
-				"windows"	"280"
+				"windows"	"292"
 			}
 			"Weapon_Switch"
 			{
-				"windows"	"283"
+				"windows"	"296"
 			}
 		}
 	}
@@ -98,7 +105,7 @@
 		{
 			"EntityListeners"
 			{
-				"windows"		"131108"
+				"windows"	"196644"
 			}
 		}
 	}

@@ -96,7 +96,7 @@ float mapFogDensity = 0.90;
 
 ArrayList Players;
 
-Handle hSetModel;
+DynamicHook hSetModel;
 
 int Collision_Offsets;
 
@@ -217,13 +217,12 @@ public void OnPluginStart(){
 		charactersAccessLevels[i] = CreateArray(3, MAXCHARACTERS_LEGACY);
 	}
 	
-	Handle hGameConf;
-	hGameConf = LoadGameConfigFile("sdktools.games");
+	GameData hGameConf = new GameData("sdktools.games");
 	
-	if(hGameConf == INVALID_HANDLE)
+	if(hGameConf == null)
 		SetFailState("Gamedata file sdktools.games.txt is missing.");
 
-	int iOffset = GameConfGetOffset(hGameConf, "SetEntityModel");
+	int iOffset = hGameConf.GetOffset("SetEntityModel");
 	delete hGameConf;
 	
 	if(iOffset == -1)

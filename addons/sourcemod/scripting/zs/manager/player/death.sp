@@ -5,7 +5,7 @@
 /**
  * Variables to store DHook calls handlers.
  **/
-Handle hDHookCommitSuicide;
+DynamicHook hDHookCommitSuicide;
 
 /**
  * Variables to store dynamic DHook offsets.

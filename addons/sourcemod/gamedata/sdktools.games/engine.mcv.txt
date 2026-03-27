@@ -16,9 +16,13 @@
 	{
 		"Keys"
 		{
-			"SlapSoundCount"	"2"
-			"SlapSound1"		"player/damage1.wav"
-			"SlapSound2"		"player/damage2.wav"
+			"SlapSoundCount"	"6"
+			"SlapSound1"		"physics/flesh/vietnam_flesh_impact_bullet1.wav"
+			"SlapSound2"		"physics/flesh/vietnam_flesh_impact_bullet2.wav"
+			"SlapSound3"		"physics/flesh/vietnam_flesh_impact_bullet3.wav"
+			"SlapSound4"		"physics/flesh/vietnam_flesh_impact_bullet4.wav"
+			"SlapSound5"		"physics/flesh/vietnam_flesh_impact_bullet5.wav"
+			"SlapSound6"		"physics/flesh/vietnam_flesh_impact_bullet6.wav"
 		}
 	}
 	
@@ -27,7 +31,7 @@
 	{
 		"Offsets"
 		{
-			/* Offset into CBaseTempEntity constructor */
+			/* Offset into CBaseTempEntity signature address */
 			"s_pTempEntities"
 			{
 				"windows"	"16"
@@ -55,7 +59,7 @@
 			}
 		}
 	}
-	
+
 	/* CGlobalEntityList */
 	"#default"
 	{
@@ -65,24 +69,21 @@
 			"FindEntityByClassname"
 			{
 				"library"	"server"
-				"windows"	"\x55\x8B\xEC\x53\x56\x8B\xF1\x8B\x4D\x08\x57\x85\xC9\x74\x2A\x8B\x01\xFF\x50\x08\x8B\x00\x83\xF8\xFF\x75\x2A\xB8\xFF\x1F\x00\x00\x40\x03\xC0\x8B\x34\xC6\xEB\x2A\x0F\xB7\xC0\x40\x03\xC0\x8B\x34\xC6\xEB\x2A\x8B\xB6\x04\x00\x02\x00\x85\xF6\x74\x2A\x8B\x5D\x0C\x8B\x3E\x85\xFF\x75\x2A\x68\x2A\x2A\x2A\x2A\xFF\x15\x2A\x2A\x2A\x2A\x83\xC4\x04\xEB\x2A\x39\x5F\x7C"
+				"windows"	"\x55\x89\xE5\x57\x56\x53\x83\xEC\x1C\x8B\x45\x0C\x8B\x5D\x08\x8B\x7D\x10\x85\xC0\x0F\x84\x2A\x2A\x2A\x2A\x8B\x10\x89\x04\x24\xFF\x52\x0C\x8B\x10\xB8\xFF\x1F\x00\x00\x0F\xB7\xCA\x83\xFA\xFF\x0F\x45\xC1\x8D\x04\x40\x8B\x5C\xC3\x10\xEB\x2A\x90\x2A\x2A\x2A\x2A\x89"
 			}
 		}
 	}
-	
-	/* CBaseEntityOutput::FireOutput */
+
+	/* General GameRules */
 	"#default"
 	{
-		"Signatures"
+		"Keys"
 		{
-			"FireOutput"
-			{
-				"library"	"server"
-				"windows"	"\x55\x8B\xEC\x81\xEC\x20\x01\x00\x00\x53"
-			}
+			"GameRulesProxy"		"CVietnamGameRulesProxy"
+			"GameRulesDataTable"	"vietnam_gamerules"
 		}
 	}
-	
+
 	/* IServer interface pointer */
 	"#default"
 	{
@@ -96,7 +97,7 @@
 			 * the expected code. A pointer to sv (IServer interface) is used
 			 * here.
 			 */
-			"CreateFakeClient_Windows"	"\x55\x8B\xEC\xFF\x75\x08\xB9"
+			"CreateFakeClient_Windows"	"\x55\x8B\xEC\x56\xFF\x75\x08\xB9"
 		}
 		
 		"Offsets"
@@ -104,14 +105,13 @@
 			/* Offset into IVEngineServer::CreateFakeClient */
 			"sv"
 			{
-				"windows"	"6"
+				"windows"	"8"
 			}
 		}
+		
 	}
 	
 	/* EntityFactoryDictionary function */
-	/* Can't be made unique in current version */
-	/*
 	"#default"
 	{
 		"Signatures"
@@ -119,11 +119,36 @@
 			"EntityFactory"
 			{
 				"library"	"server"
-				"windows"	"xA1\x2A\x2A\x2A\x2A\xA8\x01\x75\x1F\x83\xC8\x01\xB9\x2A\x2A\x2A\x2A\xA3\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x83\xC4\x04\xB8"
+				"windows"	"\xA1\x2A\x2A\x2A\x2A\xA8\x01\x0F\x85\x2A\x2A\x2A\x2A\x83\xC8\x01"
 			}
 		}
 	}
-	*/
+
+	/* CBaseEntityOutput::FireOutput */
+	"#default"
+	{
+		"Signatures"
+		{
+			"FireOutput"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x81\xEC\x44\x01\x00\x00\x8B\xC1"
+			}
+		}
+	}
+	
+ 	/* CBaseAnimating::LookupAttachment */
+	"#default"
+	{
+		"Signatures"
+		{
+			"LookupAttachment"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x56\x8B\xF1\x83\xBE\xF4\x04\x00\x00\x00\x75\x2A\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x8B\xCE\xE8\x2A\x2A\x2A\x2A\x8B\x86\xF4\x04\x00\x00\x5E\x85\xC0\x74\x2A\x83\x38\x00\x74\x2A\xFF\x75\x08\x50\xE8\x2A\x2A\x2A\x2A\x83\xC4\x08\x40"
+			}
+		}
+	}
 	
 	/* SetUserInfo data */
 	"#default"
@@ -139,9 +164,7 @@
 			"SetUserCvar"
 			{
 				/* Not 100% sure on this, why would windows change and not linux - TEST ME */
-				"windows"	"17"
-				"linux"		"63"
-				"mac"		"63"
+				"windows"	"31"
 			}
 			/**
 			 * CBaseClient::SetName(char  const*);
@@ -150,9 +173,7 @@
 			 */
 			"SetClientName"
 			{
-				"windows"	"16"
-				"linux"		"62"
-				"mac"		"62"
+				"windows"	"30"
 			}
 			/**
 			 * Offset into CBaseClient - Used by CBaseServer::UpdateUserSettings to determine when changes have been made.
@@ -164,28 +185,35 @@
 			 */
 			"InfoChanged"
 			{
-				"windows"	"176"
-				"linux"		"176"
-				"mac"		"176"
+				"windows"	"488"
 			}
 		}
 	}
 	
-	"#default"
-	{		
+ 	"#default"
+	{
+		"Keys"
+		{
+			// Netprop on the team entity for team score
+			"m_iScore"		"m_scoreTotal"
+		}
 		"Offsets"
 		{
+			"SetOwnerEntity"
+			{
+				"windows"	"19"
+			}
 			"GiveNamedItem"
 			{
-				"windows"	"445"
+				"windows"	"461"
 			}
 			"RemovePlayerItem"
 			{
-				"windows"	"303"
+				"windows"	"304"
 			}
 			"Weapon_GetSlot"
 			{
-				"windows"	"301"
+				"windows"	"299"
 			}
 			"Ignite"
 			{
@@ -197,50 +225,60 @@
 			}
 			"Teleport"
 			{
-				"windows"	"125"
+				"windows"	"114"
 			}
 			"CommitSuicide"
 			{
-				"windows"	"489"
+				"windows"	"511"
 			}
 			"GetVelocity"
 			{
-				"windows"	"157"
+				"windows"	"140"
 			}
 			"EyeAngles"
 			{
-				"windows"	"148"
+				"windows"	"131"
 			}
 			"AcceptInput"
 			{
-				"windows"	"49"
+				"windows"	"41"
 			}
 			"SetEntityModel"
 			{
-				"windows"	"32"
+				"windows"	"27"
 			}
 			"WeaponEquip"
 			{
-				"windows"	"294"
+				"windows"	"292"
 			}
 			"Activate"
 			{
-				"windows"	"41"
+				"windows"	"38"
 			}
 			"PlayerRunCmd"
 			{
-				"windows"	"468"
+				"windows"	"481"
 			}
 			"GiveAmmo"
 			{
-				"windows"	"287"
+				"windows"	"285"
+			}
+			"GetAttachment"
+			{
+				"windows"	"223"
 			}
 		}
-		
-		"Keys"
+		"Signatures"
 		{
-			"GameRulesProxy"	"CTerrorGameRulesProxy"
-			"GameRulesDataTable"	"contagion_gamerules_data"
+			/**
+			 *	CNetworkStringTableContainer::WriteBaselines
+			 *	"Index error writing string table baseline %s\n"
+			 */
+			"WriteBaselines"
+			{
+				"library"	"engine"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x58\x53\x56\x8B\xF1"
+			}
 		}
 	}
 }

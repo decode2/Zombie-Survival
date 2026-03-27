@@ -4,35 +4,67 @@
 	{
 		"Offsets"
 		{
+			"CanBeAutobalanced"
+			{
+				"windows"	"465"
+				"linux"		"466"
+			}
+			"GroundEntChanged"
+			{
+				"windows"	"178"
+				"linux"		"180"
+			}
+			"OnTakeDamage_Alive"
+			{
+				"windows"	"283"
+				"linux"		"284"
+			}
+			"GetMaxHealth"
+			{
+				"windows"	"118"
+				"linux"		"119"
+			}
+			"Blocked"
+			{
+				"windows"	"101"
+				"linux"		"102"
+			}
+			/* CBaseCombatWeapon::Reload */
+			"Reload"
+			{
+				"windows"	"287"
+				"linux"		"288"
+			}
 			"EndTouch"
 			{
-				"windows"	"110"
-				"linux"		"111"
+				"windows"	"99"
+				"linux"		"100"
 			}
+			/* CBaseEntity::FireBullets(FireBulletsInfo_t const&) */
 			"FireBullets"
 			{
-				"windows"	"124"
-				"linux"		"124"
+				"windows"	"113"
+				"linux"		"113"
 			}
 			"OnTakeDamage"
 			{
-				"windows"	"72"
-				"linux"		"73"
+				"windows"	"61"
+				"linux"		"62"
 			}
 			"PreThink"
 			{
-				"windows"	"351"
-				"linux"		"352"
+				"windows"	"348"
+				"linux"		"349"
 			}
 			"PostThink"
 			{
-				"windows"	"352"
-				"linux"		"353"
+				"windows"	"349"
+				"linux"		"350"
 			}
 			"SetTransmit"
 			{
-				"windows"	"28"
-				"linux"		"29"
+				"windows"	"20"
+				"linux"		"21"
 			}
 			"ShouldCollide"
 			{
@@ -41,63 +73,63 @@
 			}
 			"Spawn"
 			{
-				"windows"	"30"
-				"linux"		"31"
+				"windows"	"22"
+				"linux"		"23"
 			}
 			"StartTouch"
 			{
-				"windows"	"108"
-				"linux"		"109"
+				"windows"	"97"
+				"linux"		"98"
 			}
 			"Think"
 			{
-				"windows"	"57"
-				"linux"		"58"
+				"windows"	"49"
+				"linux"		"50"
 			}
 			"Touch"
 			{
-				"windows"	"109"
-				"linux"		"110"
+				"windows"	"98"
+				"linux"		"99"
 			}
 			"TraceAttack"
 			{
-				"windows"	"70"
-				"linux"		"71"
+				"windows"	"59"
+				"linux"		"60"
 			}
 			"Use"
 			{
-				"windows"	"107"
-				"linux"		"108"
+				"windows"	"96"
+				"linux"		"97"
 			}
 			"VPhysicsUpdate"
 			{
-				"windows"	"171"
-				"linux"		"172"
+				"windows"	"158"
+				"linux"		"159"
 			}
 			"Weapon_CanSwitchTo"
 			{
-				"windows"	"281"
-				"linux"		"282"
+				"windows"	"277"
+				"linux"		"278"
 			}
 			"Weapon_CanUse"
 			{
-				"windows"	"275"
-				"linux"		"276"
+				"windows"	"271"
+				"linux"		"272"
 			}
 			"Weapon_Drop"
 			{
-				"windows"	"278"
-				"linux"		"279"
+				"windows"	"274"
+				"linux"		"275"
 			}
 			"Weapon_Equip"
 			{
-				"windows"	"276"
-				"linux"		"277"
+				"windows"	"272"
+				"linux"		"273"
 			}
 			"Weapon_Switch"
 			{
-				"windows"	"279"
-				"linux"		"280"
+				"windows"	"275"
+				"linux"		"276"
 			}
 		}
 	}

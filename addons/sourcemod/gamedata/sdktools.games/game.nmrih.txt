@@ -55,9 +55,24 @@
 			"FireOutput"
 			{
 				"library"	"server"
-				"windows"	"\x55\x8B\xEC\x81\xEC\x28\x01\x00\x00\xD9\x45\x24\x53\x8B\xD9\xC7"
+				"windows"	"\x55\x8B\xEC\x81\xEC\x24\x01\x00\x00\x53\x8B\x5D\x20\x8B\xC1\x56\x57"
 				"linux"		"@_ZN17CBaseEntityOutput10FireOutputE9variant_tP11CBaseEntityS2_f"
 				"mac"		"@_ZN17CBaseEntityOutput10FireOutputE9variant_tP11CBaseEntityS2_f"
+			}
+		}
+	}
+
+	/* CBaseAnimating::LookupAttachment */
+	"#default"
+	{
+		"Signatures"
+		{
+			"LookupAttachment"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x56\x8B\xF1\x80\xBE\x35\x03\x00\x00\x00\x75\x2A\x83\xBE\xA8\x04\x00\x00\x00\x75\x2A\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x8B\xCE\xE8\x2A\x2A\x2A\x2A\x8B\x86\xA8\x04\x00\x00\x85\xC0\x74\x2A\x83\x38\x00\x74\x2A\xFF\x75\x08\x50\xE8\x2A\x2A\x2A\x2A\x83\xC4\x08\x40"
+				"linux"		"@_ZN14CBaseAnimating16LookupAttachmentEPKc"
+				"mac"		"@_ZN14CBaseAnimating16LookupAttachmentEPKc"
 			}
 		}
 	}
@@ -67,6 +82,12 @@
 	{
 		"Offsets"
 		{
+			"SetOwnerEntity"
+			{
+				"windows"	"18"
+				"linux"		"19"
+				"mac"		"19"
+			}
 			"GiveNamedItem"
 			{
 				"windows"	"420"
@@ -106,8 +127,8 @@
 			"CommitSuicide"
 			{
 				"windows"	"459"
-				"linux"		"460"
-				"mac"		"460"
+				"linux"		"459"
+				"mac"		"459"
 			}
 			"GetVelocity"
 			{
@@ -157,6 +178,18 @@
 				"linux"		"260"
 				"mac"		"260"
 			}
+			"GetAttachment"
+			{
+				"windows"	"210"
+				"linux"		"211"
+				"mac"		"211"
+			}
+		}
+		
+		"Keys"
+		{
+			"GameRulesProxy"		"CNMRiH_GameRulesProxy"
+			"GameRulesDataTable"	"nmrih_gamerules_data"
 		}
 	}
 }

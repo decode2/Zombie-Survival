@@ -14,21 +14,22 @@
 	/* CGlobalEntityList */
 	"#default"
 	{
+		"#supported"
+		{
+			"engine"	"mcv"
+		}
+		
 		"Offsets"
 		{
 			/* Offset into LevelShutdown */
 			"gEntList"
 			{
-				"windows"	"11"
-				"windows64"	"13"
+				"windows"	"33"
 			}
 
 			"EntInfo"
 			{
-				"windows"	"4"
-				"windows64"	"8"
-				"linux"		"4"
-				"mac"		"4"
+				"windows"	"4"	
 			}
 		}
 		
@@ -37,14 +38,7 @@
 			"LevelShutdown"
 			{
 				"library"	"server"
-				"windows"	"\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xB9\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xE8"
-				"windows64"	"\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x48\x8D\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xE8"
-			}
-			"gEntList"
-			{
-				"library"	"server"
-				"linux"		"@gEntList"
-				"mac"		"@gEntList"
+				"windows"	"\x56\x8B\x35\x2A\x2A\x2A\x2A\x8B\xCE\x8B\x06\xFF\x90\x84\x00\x00\x00\xE8\x2A\x2A\x2A\x2A\xE8"
 			}
 		}
 	}
