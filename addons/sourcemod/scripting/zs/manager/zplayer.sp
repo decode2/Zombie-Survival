@@ -1415,7 +1415,12 @@ methodmap ZPlayer < Player{
 			//AcceptEntityInput(knife, "Kill");
 			RemoveEntity(knife);
 		}
-		GivePlayerItem(this.id, "weapon_knife");
+		
+		int iNewKnife = GivePlayerItem(this.id, "weapon_knife");
+		if (iNewKnife == -1){
+			// Re-try next frame if it failed (CS:GO engine limitation sometimes)
+			RequestFrame(Frame_GiveKnife, GetClientUserId(this.id));
+		}
 	}
 	
 	// Reset player index values
@@ -2011,8 +2016,8 @@ methodmap ZPlayer < Player{
 		
 		// Reset knife entity
 		//this.ResetKnife();
-		FakeClientCommandEx(this.id, "use weapon_knife");
-		
+		Weapon_SwitchToMelee(this.id);
+	}	
 		// Emit an infect aura effect
 		StartInfectionEffect(this.id);
 		
@@ -2109,7 +2114,7 @@ methodmap ZPlayer < Player{
 		
 		this.setModel(ActualMode.is(MODE_MUTATION) ? HAZMAT_MODEL : class.model, class.arms);
 		
-		FakeClientCommandEx(this.id, "use weapon_knife");
+		Weapon_SwitchToMelee(this.id);
 		
 		this.iLasermines = LASERMINE_QUANTITY;
 		this.iLasermineDefused0 = 0;
@@ -3378,6 +3383,16 @@ stock void SelectiveEmitSoundToAll(const char[] sound, const float origin[3] = N
 				continue;
 			
 			EmitSoundToClient(i, sound, _, SNDCHAN_AUTO, SNDLEVEL_NORMAL, _, 0.2, _, _, origin, _, true, 0.0);
+		}
+	}
+}
+
+public void Frame_GiveKnife(any data){
+	int client = GetClientOfUserId(data);
+	if (client > 0 && IsClientInGame(client) && IsPlayerAlive(client)){
+		int knife = GetPlayerWeaponSlot(client, CS_SLOT_KNIFE);
+		if (knife == -1){
+			GivePlayerItem(client, "weapon_knife");
 		}
 	}
 }

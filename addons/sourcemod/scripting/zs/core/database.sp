@@ -120,13 +120,6 @@ stock void DataBaseOnInit(){
 	
 	Database.Connect(SQLBaseConnect_Callback, DATABASE_SECTION, false);
 	
-	// Validate loaded map
-	if (gServerData.MapLoaded){
-		
-		//!! Get all data !!//
-		DataBaseOnLoad();
-	}
-	
 	// Database hooks to prevent data loss
 	AddCommandListener(DataBaseOnCommandListened, "exit");
 	AddCommandListener(DataBaseOnCommandListened, "quit");
@@ -196,7 +189,8 @@ public void SQLBaseConnect_Callback(Database hDatabase, char[] sError, bool bDro
 		// Load zclasses
 		ZClassesOnUpdate(gServerData.DBI);
 		
-		////////////////////////////////////////////////// 
+		//!! Get all data !!//
+		DataBaseOnLoad();
 	}
 }
 
@@ -269,6 +263,9 @@ void DataBaseOnUnload(/*void*/){
 	// i = client index
 	for (int i = 1; i <= MaxClients; i++){
 		
+		if (!IsClientInGame(i)) {
+			continue;
+		}
 		
 		// If client wasn't loaded, then skip
 		if (!gClientData[i].bLogged){
@@ -316,6 +313,9 @@ void DataBaseOnLoad(/*void*/){
 	// i = client index
 	for (int i = 1; i <= MaxClients; i++){
 		
+		if (!IsClientInGame(i)) {
+			continue;
+		}
 		
 		// If client wasn't loaded, then skip
 		if (gClientData[i].bLogged){

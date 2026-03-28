@@ -101,17 +101,17 @@ ArrayList grenadeCount[GRENADE_SLOTS];
 void ZGrenades_OnPluginStart(){
 	
 	// Aura shield array
-	AuraShields = CreateArray(2);
-	BlackHoles = CreateArray(2);
+	AuraShields = new ArrayList(2);
+	BlackHoles = new ArrayList(2);
 	
 	// Grenades arrays
-	gGrenadePackLevel = CreateArray(5);
-	gGrenadePackReset = CreateArray(5);
+	gGrenadePackLevel = new ArrayList(5);
+	gGrenadePackReset = new ArrayList(5);
 	
 	// Grenade packs arrays
 	for (int i; i < GRENADE_SLOTS; i++){
-		grenadeType[i] = CreateArray(5);
-		grenadeCount[i] = CreateArray(5);
+		grenadeType[i] = new ArrayList(5);
+		grenadeCount[i] = new ArrayList(5);
 	}
 	
 	// Avoid exploding decoys

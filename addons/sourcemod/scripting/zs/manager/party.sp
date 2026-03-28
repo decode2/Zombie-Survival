@@ -33,9 +33,9 @@ int 	gPartyDecalEntity[MAXPLAYERS+1] = -1;
 void PartyOnInit(){
 	
 	//Parties
-	gPartys = CreateArray(4);
+	gPartys = new ArrayList(4);
 	for(int i = 0; i < PARTY_MAX_COUNT; i++){
-		gPartyMembers[i] = CreateArray(4);
+		gPartyMembers[i] = new ArrayList(4);
 	}
 }
 

@@ -266,6 +266,23 @@ stock int IsPlayerHasWeapon(int clientIndex, int weaponID){
 	return -1;
 }*/
 
+stock void Weapon_SwitchToMelee(int client){
+	int knife = GetPlayerWeaponSlot(client, view_as<int>(SlotType_Melee));
+	if (knife != -1 && IsValidEntity(knife)){
+		SDKCall(hSDKCallWeaponSwitch, client, knife, 0);
+	}
+}
+stock bool IsKnife(const char[] classname){
+	if (StrEqual(classname, "weapon_knife") || 
+		StrEqual(classname, "weapon_knife_t") || 
+		StrContains(classname, "weapon_knife_") != -1 || 
+		StrEqual(classname, "weapon_bayonet") || 
+		StrEqual(classname, "weapon_knifegg"))
+	{
+		return true;
+	}
+	return false;
+}
 stock int readWeaponNetworkedIndex(int weaponIndex){
 	
 	char sWpn[64]; 

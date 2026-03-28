@@ -116,12 +116,12 @@ public void OnPluginStart(){
 	// MOVER A ZPLAYER ON INIT (CLASSES ON INIT EN REALIDAD)
 	ToolsOnCvarInit();
 	
-	Players = CreateArray(2);
+	Players = new ArrayList(2);
 	
 	// Accounts arrays
-	users = CreateArray(ByteCountToCells(32), MAXPLAYERS+1);
-	passwords = CreateArray(ByteCountToCells(32), MAXPLAYERS+1);
-	characterNames = CreateArray(ByteCountToCells(32), MAXPLAYERS+1);
+	users = new ArrayList(ByteCountToCells(32), MAXPLAYERS+1);
+	passwords = new ArrayList(ByteCountToCells(32), MAXPLAYERS+1);
+	characterNames = new ArrayList(ByteCountToCells(32), MAXPLAYERS+1);
 	
 	//=====================================================
 	//		INIT MODULES' ARRAYS & STORE ITS DATA
@@ -211,10 +211,10 @@ public void OnPluginStart(){
 	g_iToolsRagdoll = FindSendPropInfo("CCSPlayer", "m_hRagdoll");
 	
 	for (int i = 1; i <= MaxClients; i++){
-		charactersNames[i] = CreateArray(6, MAXCHARACTERS_LEGACY);
-		charactersLevels[i] = CreateArray(3, MAXCHARACTERS_LEGACY);
-		charactersResets[i] = CreateArray(3, MAXCHARACTERS_LEGACY);
-		charactersAccessLevels[i] = CreateArray(3, MAXCHARACTERS_LEGACY);
+		charactersNames[i] = new ArrayList(6, MAXCHARACTERS_LEGACY);
+		charactersLevels[i] = new ArrayList(3, MAXCHARACTERS_LEGACY);
+		charactersResets[i] = new ArrayList(3, MAXCHARACTERS_LEGACY);
+		charactersAccessLevels[i] = new ArrayList(3, MAXCHARACTERS_LEGACY);
 	}
 	
 	GameData hGameConf = new GameData("sdktools.games");
@@ -2049,9 +2049,9 @@ public void ShowComboInfo(int client, int damagehit, bool bCrit){
 	
 	// Set parameters
 	if (combo.id >= view_as<int>(COMBO_MASSIVE))
-		SetHudTextParams(GetRandomFloat(0.42, 0.38), GetRandomFloat(0.67, 0.63), COMBO_DURATION, GetRandomInt(100, 255), GetRandomInt(150, 255), GetRandomInt(150, 255), 1, 1, COMBO_DURATION, 0.01, COMBO_DURATION);
+		SetHudTextParams(GetRandomFloat(0.42, 0.38), GetRandomFloat(0.67, 0.63), COMBO_DURATION, GetRandomInt(100, 255), GetRandomInt(150, 255), GetRandomInt(150, 255), 255, 1, COMBO_DURATION, 0.01, COMBO_DURATION);
 	else
-		SetHudTextParams(0.42, 0.65, COMBO_DURATION, combo.iRed, combo.iGreen, combo.iBlue, 1, 1, 0.5, 0.01, 0.8);
+		SetHudTextParams(0.42, 0.65, COMBO_DURATION, combo.iRed, combo.iGreen, combo.iBlue, 255, 1, 0.5, 0.01, 0.8);
 	
 	ShowSyncHudText(player.id, hComboSynchronizer, msg);
 	
@@ -2144,7 +2144,7 @@ public void ShowComboInfoParty(int pid, int damagehit){
 	// String buffer
 	char msg[512];
 	
-	SetHudTextParams(-1.0, 0.65, COMBO_DURATION, combo.iRed, combo.iGreen, combo.iBlue, 1, 1, 0.5, 0.01, 0.8);
+	SetHudTextParams(-1.0, 0.65, COMBO_DURATION, combo.iRed, combo.iGreen, combo.iBlue, 255, 1, 0.5, 0.01, 0.8);
 	
 	ZParty pt = ZParty(pid);
 	ZPlayer ptPlayer;
@@ -2332,7 +2332,7 @@ stock void printZombieComboHUD(int client, int ap, bool infection = true){
 	char buffer[128];
 	FormatEx(buffer, sizeof(buffer), "%t%t", infection ? "Infection" : "Assassination", "Zombie combo hud", sGain);
 	
-	SetHudTextParams(-1.0, 0.55, 3.0, GetRandomInt(100, 255), GetRandomInt(60, 255), GetRandomInt(60, 255), 60, 2, 0.5, 0.01, 0.8);
+	SetHudTextParams(-1.0, 0.55, 3.0, GetRandomInt(100, 255), GetRandomInt(60, 255), GetRandomInt(60, 255), 255, 2, 0.5, 0.01, 0.8);
 	ShowSyncHudText(client, hComboSynchronizer, buffer);
 }
 
@@ -4463,7 +4463,7 @@ public Action WeaponsOnCanUse(int client, int weaponIndex){
 		return Plugin_Handled;
 	
 	if(player.isType(PT_ZOMBIE)){
-		if(StrEqual(weap, "weapon_knife")) return Plugin_Continue;
+		if(IsKnife(weap)) return Plugin_Continue;
 		if(StrEqual(weap, "weapon_flashbang")) return Plugin_Continue;
 		
 		return Plugin_Handled;
@@ -4475,20 +4475,20 @@ public Action WeaponsOnCanUse(int client, int weaponIndex){
 			if (StrEqual(weap, "weapon_awp") && iWeaponID == iWeaponBazooka)
 				return Plugin_Continue;
 			
-			else if (StrEqual(weap, "weapon_knife")) return Plugin_Continue;
+			else if (IsKnife(weap)) return Plugin_Continue;
 			else{
 				return Plugin_Handled;
 			}
 		}
 		else{
-			if (StrEqual(weap, "weapon_knife")) return Plugin_Continue;
+			if (IsKnife(weap)) return Plugin_Continue;
 			
 			return Plugin_Handled;
 		}
 	}
 	
 	if (player.isType(PT_GUNSLINGER)){
-		if (StrEqual(weap, "weapon_knife")) return Plugin_Continue;
+		if (IsKnife(weap)) return Plugin_Continue;
 		if (StrEqual(weap, "weapon_flashbang")) return Plugin_Continue;
 		if (StrEqual(weap, "weapon_smokegrenade")) return Plugin_Continue;
 		if (StrEqual(weap, "weapon_deagle")) return Plugin_Continue;
@@ -4496,7 +4496,7 @@ public Action WeaponsOnCanUse(int client, int weaponIndex){
 		return Plugin_Handled;
 	}
 	else if (player.isType(PT_SNIPER)){
-		if (StrEqual(weap, "weapon_knife")) return Plugin_Continue;
+		if (IsKnife(weap)) return Plugin_Continue;
 		if (StrEqual(weap, "weapon_decoy")) return Plugin_Continue;
 		if (StrEqual(weap, "weapon_awp")) return Plugin_Continue;
 		
@@ -4607,7 +4607,7 @@ public void OnClientWeaponSwitchPost(int client, int weapon){
 	}
 	
 	// Change models in each case
-	if (StrEqual(sWpn, "weapon_knife")){
+	if (IsKnife(sWpn)){
 		
 		if (player.isBoss(false)){
 			SetViewModel(weapon, playerview, GetModelIndex(ZOMBIE_BOSSES_KNIFE_MODEL_V));
